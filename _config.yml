@@ -9,7 +9,7 @@ description: >- # this means to ignore newlines
   hacker/offensive security professional. It assumes no prior knowledge 
   of security concepts and skills (other than the very basic), but is 
   aimed at those with a somewhat technical computer-science background.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/off_sec_101" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  marsbradley
 
