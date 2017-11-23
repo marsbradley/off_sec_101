@@ -1,0 +1,31 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Offensive Security 101
+email: marsbradley@hotels.com
+description: >- # this means to ignore newlines 
+  This course covers variety of methods and tools used by the budding 
+  hacker/offensive security professional. It assumes no prior knowledge 
+  of security concepts and skills (other than the very basic), but is 
+  aimed at those with a somewhat technical computer-science background.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  marsbradley
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+exclude:
+ - Gemfile
+ - Gemfile.lock
+ - node_modules
+ - local_files/
+ - vendor/bundle/
+ - vendor/cache/
+ - vendor/gems/
+ - vendor/ruby/
