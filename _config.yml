@@ -3,15 +3,24 @@
 
 # Site settings
 title: Offensive Security 101
-email: marsbradley@hotels.com
+authors: 
+  - name: Marshall Bradley
+    email: marsbradley@hotels.com
+    github_username: marsbradley
+  - name: David Thomas
+    email: t-davithomas@hotels.com
+    github_username: dvdthms
+  - name: Kyle Hodgetts
+    email: khodgetts@hotels.com
+    github_username: KyleHodgetts
+
 description: >- # this means to ignore newlines 
   This course covers variety of methods and tools used by the budding 
   hacker/offensive security professional. It assumes no prior knowledge 
   of security concepts and skills (other than the very basic), but is 
   aimed at those with a somewhat technical computer-science background.
 baseurl: "/off_sec_101" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  marsbradley
+url: "https://marsbradley.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
