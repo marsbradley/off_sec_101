@@ -9,3 +9,28 @@ If you're on a Mac, go ahead and download [Parallels][parallels], which you can 
 
 [parallels]: https://www.parallels.com/
 [vmware-player]: https://www.vmware.com/products/workstation-player.html
+
+
+Disclaimer:
+DO NOT USE THE MATERIAL YOU LEARN ON THIS COURSE TO DO ANY OF THE FOLLOWING:
+-Start attacking random websites
+-Start attacking really large websites
+-Use the attacks that you will learn
+-Teach others about these attacks
+
+This class is for educational purposes only, and you should not attempt anything on a computer that you do not own.
+
+
+Data Protection:
+
+Confidentiality: the attacker cannot read your data
+
+Integrity: the data I receive is genuine
+
+Availability: I can access my data when I need it
+
+
+
+Kali Linux:
+Kali Linux is a Linux distribution designed for digital forensics and penetration testing, and other security-related purposes.
+It comes with over 600 pre-installed programs, such as Nmap, Wireshark, Burp Suite, and OWASP ZAP.
