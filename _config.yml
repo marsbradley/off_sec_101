@@ -10,9 +10,9 @@ authors:
   - name: David Thomas
     email: t-davithomas@hotels.com
     github_username: dvdthms
-  - name: Kyle Hodgetts
-    email: khodgetts@hotels.com
-    github_username: KyleHodgetts
+  - name: Damon Li
+    email: dli@expedia.com
+    github_username: damonlidev
 
 description: >- # this means to ignore newlines 
   This course covers variety of methods and tools used by the budding 
