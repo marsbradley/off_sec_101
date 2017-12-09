@@ -9,4 +9,3 @@ If you're on a Mac, go ahead and download [Parallels][parallels], which you can 
 
 [parallels]: https://www.parallels.com/
 [vmware-player]: https://www.vmware.com/products/workstation-player.html
-

@@ -1,0 +1,97 @@
+---
+layout: slide
+title:  "Presentation X | An Intro to Computer Security"
+description: A 5 Minute Introduction to Computer Security
+theme: black
+transition: slide
+---
+
+<section data-markdown>
+<script type="text/template">
+
+![slideshow_logo](/assets/images/code_academy.png) <!-- .element: width="300px" style="background:none; border:none; box-shadow:none;" -->
+
+
+## Offensive Security 101
+
+*The 5 minute elevator pitch...*
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## What is security?
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+#### Three key concepts:
+
+- Confidentiality
+- Integrity 
+- Availability
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### Confidentiality:
+
+_"My data can't be read by a malicious party, only by the intended receipient"_
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### Integrity:
+
+_"My data can't be altered or forged by a malicious party, it is always possible to tell genuine from fake"_
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### Availability:
+
+_"A malicious party can't prevent those with permissions from accessing my data"_
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### Confidentiality, a classic exploit
+
+Let's dive in to a worked example for how **confidentiality** can be broken in a very basic program...
+
+</script>
+</section>
+
+<section>
+<pre><code style="background:none;">char pass[20]; # an array of characters, i.e. a string
+
+printf("\n Enter the password: "); # provide a prompt
+
+gets(pass); # read in user input
+
+# check if passwords don't match:
+if (strcmp(pass, "supersecurepassword") != 0) {
+    printf ("\n Incorrect Password");
+} else {
+    printf ("\n Correct Password");
+}
+</code></pre> 
+</section>
+
