@@ -20,78 +20,83 @@ transition: slide
 </section>
 
 <section data-markdown>
-<script type="text/template">
 
-## What is security?
+## What is Offensive Security?
 
-</script>
 </section>
 
 <section data-markdown>
-<script type="text/template">
 
-#### Three key concepts:
-
-- Confidentiality
-- Integrity 
-- Availability
-
-</script>
-</section>
-
-<section data-markdown>
-<script type="text/template">
-
-### Confidentiality:
+### Key Concept: Confidentiality
 
 _"My data can't be read by a malicious party, only by the intended receipient"_
 
-</script>
-</section>
-
-<section data-markdown>
-<script type="text/template">
-
-### Integrity:
-
-_"My data can't be altered or forged by a malicious party, it is always possible to tell genuine from fake"_
-
-</script>
-</section>
-
-<section data-markdown>
-<script type="text/template">
-
-### Availability:
-
-_"A malicious party can't prevent those with permissions from accessing my data"_
-
-</script>
-</section>
-
-<section data-markdown>
-<script type="text/template">
-
-### Confidentiality, a classic exploit
-
-Let's dive in to a worked example for how **confidentiality** can be broken in a very basic program...
-
-</script>
 </section>
 
 <section>
-<pre><code style="background:none;">char pass[20]; # an array of characters, i.e. a string
 
-printf("\n Enter the password: "); # provide a prompt
+<h3> Buffer overflow: the classic exploit </h3> 
+<p align="left">
+<br>
+Let's dive into an example of how confidentiality could be broken in a very basic program...
+</p>
+</section>
 
-gets(pass); # read in user input
+<section>
 
-# check if passwords don't match:
-if (strcmp(pass, "supersecurepassword") != 0) {
-    printf ("\n Incorrect Password");
+<h3>'Simple' C Code</h3>
+
+<pre><code style="background:none; box-shadow:none;">int authenticated = 0; // 0 false, 1 true
+char entered_password[20]; // array of characters (a string)
+
+printf("Enter the password: "); // provide a prompt
+gets(entered_password); // read in user input
+// check if password matches:
+if (strcmp(entered_password, "supersecurepassword") != 0) {
+    printf ("Incorrect Password \n");
 } else {
-    printf ("\n Correct Password");
+    printf ("Correct Password \n");
+    authenticated = 1;
+}
+if (authenticated) {
+    printf ("You've been authenticated! \n");
 }
 </code></pre> 
+</section>
+
+<section data-markdown>
+
+## What happened?
+
+</section>
+
+<section>
+
+<h3> What's in memory? </h3>
+
+<pre><code data-noescape style="background:none; box-shadow:none;" class="nohighlight">
+char pass[20] = [   --20 wide--   ]
+user input    = AAAAAAA...AAAAAAAAA<mark>AAAAAAAA</mark>
+</code></pre> 
+<br>
+<p align='left' style="font-size:30px">The data highlighed in <mark>yellow</mark> is to big to fit in our defined buffer, and therefore ends up overwriting our "authenticated" flag, due to how memory is laid out in a computer.</p>
+</section>
+
+<section>
+
+<h3> Offensive Security: The Goal </h3>
+<p align='left'>
+<br>
+In essence; to discover unexpected, unintended and potentially dangerous program behaviour.  
+<br>
+<br>
+If you want to learn how do this yourself, please attend the course!
+</p>
+</section>
+
+<section data-markdown>
+
+## Fin.
+
 </section>
 
