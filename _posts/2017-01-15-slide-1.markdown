@@ -9,8 +9,7 @@ transition: slide
 <section data-markdown>
 <script type="text/template">
 
-![slideshow_logo](/assets/images/code_academy.png) <!-- .element: width="300px" style="background:none; border:none; box-shadow:none;" -->
-
+![slideshow_logo](https://marsbradley.github.io/off_sec_101/assets/images/code_academy.pngmars) <!-- .element: width="300px" style="background:none; border:none; box-shadow:none;" -->
 
 ## Offensive Security 101
 
@@ -29,7 +28,7 @@ transition: slide
 
 ### Key Concept: Confidentiality
 
-_"My data can't be read by a malicious party, only by the intended receipient"_
+_"My data can't be read by a malicious party, only by the intended recipient"_
 
 </section>
 
@@ -38,7 +37,7 @@ _"My data can't be read by a malicious party, only by the intended receipient"_
 <h3> Buffer overflow: the classic exploit </h3> 
 <p align="left">
 <br>
-Let's dive into an example of how confidentiality could be broken in a very basic program...
+Let's dive into an example of how confidentiality can be broken in a very basic program...
 </p>
 </section>
 
@@ -46,23 +45,23 @@ Let's dive into an example of how confidentiality could be broken in a very basi
 
 <h3>'Simple' C Code</h3>
 
-<pre><code style="background:none; box-shadow:none; font-size:21px; line-height: normal;">int authenticated = 0; // 0 false, 1 true
-char entered_password[20]; // array of characters (a string)
+<pre style="box-shadow:none;"><code data-noescape class="C" style="background:none; font-size:20px; line-height: normal;"><span class="fragment">char entered_password[20]; // array of characters (a string)
+int authenticated = 0; // 0 false, 1 true</span>
 
-printf("Enter the password: "); // provide a prompt
-gets(entered_password); // read in user input
+<span class="fragment">printf("Enter the password: "); // provide a prompt</span>
+<span class="fragment">gets(entered_password); // read in user input</span>
 
-// check if password matches:
+<span class="fragment">// check if password matches:
 if (strcmp(entered_password, "supersecurepassword") == 0) {
     printf ("Correct Password \n");
     authenticated = 1;
-} else {
+}</span> <span class="fragment">else {
     printf ("Incorrect Password \n");
-}
+}</span>
 
-if (authenticated) {
+<span class="fragment">if (authenticated) {
     printf ("You've been authenticated! \n");
-}
+}</span>
 </code></pre> 
 </section>
 
@@ -76,12 +75,12 @@ if (authenticated) {
 
 <h3> What's in memory? </h3>
 
-<pre><code data-noescape style="background:none; box-shadow:none;" class="nohighlight">
+<pre style="box-shadow:none;"><code data-noescape style="background:none;" class="nohighlight">
 char pass[20] = [   --20 wide--   ]
 user input    = AAAAAAA...AAAAAAAAA<mark>AAAAAAAA</mark>
 </code></pre> 
 <br>
-<p align='left' style="font-size:30px">The data highlighed in <mark>yellow</mark> is to big to fit in our defined buffer, and therefore ends up overwriting our "authenticated" flag, due to how memory is laid out in a computer.</p>
+<p align='left' style="font-size:30px">The data highlighted in <mark>yellow</mark> is too big to fit in the assigned buffer, and therefore ends up overwriting our "authenticated" flag, due to how memory is laid out in a computer.</p>
 </section>
 
 <section>
@@ -92,7 +91,7 @@ user input    = AAAAAAA...AAAAAAAAA<mark>AAAAAAAA</mark>
 In essence; to discover unexpected, unintended and potentially dangerous program behaviour.  
 <br>
 <br>
-If you want to learn how do this yourself, please attend the course!
+If you want to learn how do this yourself, please attend the upcoming course!
 </p>
 </section>
 
