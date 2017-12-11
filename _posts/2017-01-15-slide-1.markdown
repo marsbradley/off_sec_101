@@ -9,7 +9,7 @@ transition: slide
 <section data-markdown>
 <script type="text/template">
 
-![slideshow_logo](https://marsbradley.github.io/off_sec_101/assets/images/code_academy.pngmars) <!-- .element: width="300px" style="background:none; border:none; box-shadow:none;" -->
+![slideshow_logo](https://marsbradley.github.io/off_sec_101/assets/images/code_academy.png) <!-- .element: width="300px" style="background:none; border:none; box-shadow:none;" -->
 
 ## Offensive Security 101
 
