@@ -38,3 +38,5 @@ exclude:
  - vendor/cache/
  - vendor/gems/
  - vendor/ruby/
+ - reveal.js/plugin/markdown/example.html
+ - reveal.js/test/simple.html
