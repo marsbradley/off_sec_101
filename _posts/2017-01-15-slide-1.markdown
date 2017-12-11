@@ -46,18 +46,20 @@ Let's dive into an example of how confidentiality could be broken in a very basi
 
 <h3>'Simple' C Code</h3>
 
-<pre><code style="background:none; box-shadow:none;">int authenticated = 0; // 0 false, 1 true
+<pre><code style="background:none; box-shadow:none; font-size:21px; line-height: normal;">int authenticated = 0; // 0 false, 1 true
 char entered_password[20]; // array of characters (a string)
 
 printf("Enter the password: "); // provide a prompt
 gets(entered_password); // read in user input
+
 // check if password matches:
-if (strcmp(entered_password, "supersecurepassword") != 0) {
-    printf ("Incorrect Password \n");
-} else {
+if (strcmp(entered_password, "supersecurepassword") == 0) {
     printf ("Correct Password \n");
     authenticated = 1;
+} else {
+    printf ("Incorrect Password \n");
 }
+
 if (authenticated) {
     printf ("You've been authenticated! \n");
 }
