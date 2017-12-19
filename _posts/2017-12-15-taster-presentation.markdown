@@ -5,16 +5,16 @@ description: A 5 Minute Introduction to Computer Security
 transition: slide
 ---
 
-<section data-markdown>
-<script type="text/template">
+<section>
 
-![slideshow_logo](https://marsbradley.github.io/off_sec_101/assets/images/code_academy.png) <!-- .element: width="300px" style="background:none; border:none; box-shadow:none;" -->
+<img  width="300px"  src="https://marsbradley.github.io/off_sec_101/assets/images/code_academy.png">
 
-## Offensive Security 101
+<img width="300px"  src="https://marsbradley.github.io/off_sec_101/assets/images/kali.png">
 
-_The 5 minute elevator pitch..._
+<h2> Offensive Security 101</h2>
 
-</script>
+<p><i>The 5 minute elevator pitch...</i></p>
+
 </section>
 
 <section data-markdown>

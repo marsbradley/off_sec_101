@@ -14,3 +14,9 @@
 .reveal pre code[large] {
 	padding: 10px;
 }
+
+.reveal section img {
+	background:none; 
+	border:none; 
+	box-shadow:none;
+}
