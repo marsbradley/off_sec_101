@@ -1,0 +1,16 @@
+.reveal pre {
+	box-shadow: none;
+}
+
+.reveal pre code {
+	background-color: black;
+	border-radius: 10px; 
+}
+
+.reveal pre code[small] {
+	line-height: normal;
+}
+
+.reveal pre code[large] {
+	padding: 10px;
+}

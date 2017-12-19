@@ -1,8 +1,7 @@
 ---
 layout: slide
-title:  "Presentation X | An Intro to Computer Security"
+title:  "Taster Presentation | An Intro to Computer Security"
 description: A 5 Minute Introduction to Computer Security
-theme: black
 transition: slide
 ---
 
@@ -13,7 +12,7 @@ transition: slide
 
 ## Offensive Security 101
 
-*The 5 minute elevator pitch...*
+_The 5 minute elevator pitch..._
 
 </script>
 </section>
@@ -32,20 +31,19 @@ _"My data can't be read by a malicious party, only by the intended recipient"_
 
 </section>
 
-<section>
+<section data-markdown>
 
-<h3> Buffer overflow: the classic exploit </h3> 
-<p align="left">
-<br>
-Let's dive into an example of how confidentiality can be broken in a very basic program...
-</p>
+### Buffer Overflow
+
+_"THE classic exploit; often breaks confidentiality in basic C programs."_
+
 </section>
 
 <section>
 
 <h3>'Simple' C Code</h3>
 
-<pre style="box-shadow:none;"><code data-noescape class="C" style="background:none; font-size:20px; line-height: normal;"><span class="fragment">char entered_password[20]; // array of characters (a string)
+<pre><code small style="font-size: 20px;" data-noescape class="C"><span class="fragment">char entered_password[20]; // array of characters (a string)
 int authenticated = 0; // 0 false, 1 true</span>
 
 <span class="fragment">printf("Enter the password: "); // provide a prompt</span>
@@ -67,6 +65,12 @@ if (strcmp(entered_password, "supersecurepassword") == 0) {
 
 <section data-markdown>
 
+## Demo
+
+</section>
+
+<section data-markdown>
+
 ## What happened?
 
 </section>
@@ -75,12 +79,12 @@ if (strcmp(entered_password, "supersecurepassword") == 0) {
 
 <h3> What's in memory? </h3>
 
-<pre style="box-shadow:none;"><code data-noescape style="background:none;" class="nohighlight">
-char pass[20] = [   --20 wide--   ]
-user input    = AAAAAAA...AAAAAAAAA<mark>AAAAAAAA</mark>
+<br>
+<pre><code large style="font-size: 31px;" data-noescape class="nohighlight">char pass[20] = [  -- 20  wide --  ]
+user input    = YESTHISPASSWORDISWAY<mark>TOOSTRONG</mark>
 </code></pre> 
 <br>
-<p align='left' style="font-size:30px">The data highlighted in <mark>yellow</mark> is too big to fit in the assigned buffer, and therefore ends up overwriting our "authenticated" flag, due to how memory is laid out in a computer.</p>
+<p align='left'>The characters highlighted in <mark>yellow</mark> overflow the end of the <code>entered_password</code> buffer, and overwrite the <code>authenticated</code> flag, due to how memory is laid out in a computer.</p>
 </section>
 
 <section>
@@ -97,7 +101,7 @@ If you want to learn how do this yourself, please attend the upcoming course!
 
 <section data-markdown>
 
-## Fin.
+## Fin
 
 </section>
 

@@ -26,14 +26,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="{{ "/reveal.js/css/reveal.css" | prepend: site.baseurl }}"/>
-    {%if page.theme %}
-      <link rel="stylesheet" href="{{ "/reveal.js/css/theme/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
-    {% else %}
-      <link rel="stylesheet" href="{{ "/reveal.js/css/theme/black.css" | prepend: site.baseurl }}" id="theme"/>
-    {% endif %}
+
+    <link rel="stylesheet" href="{{ "/reveal.js/css/theme/black.css" | prepend: site.baseurl }}" id="theme"/>
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="{{ "/reveal.js/lib/css/zenburn.css" | prepend: site.baseurl }}"/>
+
+    <!-- Custom rules -->
+    <link rel="stylesheet" href="{{ "/assets/slide-custom.css" | prepend: site.baseurl }}"/>
 
     <!-- Printing and PDF exports -->
     <script>

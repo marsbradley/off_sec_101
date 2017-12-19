@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Lesson 7 | Use After Free"
-date:   2017-01-22
-categories: memory
+title:  "Lesson 4 | SQL Injection/Cross-site Scripting"
+categories: web
 ---
 
 If you're on a Mac, go ahead and download [Parallels][parallels], which you can use to run a VM. If you're running Windows, use [VMWare Player][vmware-player].

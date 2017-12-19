@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Lesson 8 | Breaking Hashes"
-date:   2017-01-23
-categories: crypto
+title:  "Lesson 2 | Analysis and Recon"
+categories: network
 ---
 
 If you're on a Mac, go ahead and download [Parallels][parallels], which you can use to run a VM. If you're running Windows, use [VMWare Player][vmware-player].

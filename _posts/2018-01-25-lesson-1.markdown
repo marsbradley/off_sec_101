@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Lesson 2 | Analysis and Recon"
-date:   2017-01-17
-categories: network
+title:  "Lesson 1 | Kali Linux"
+categories: tools
 ---
 
 If you're on a Mac, go ahead and download [Parallels][parallels], which you can use to run a VM. If you're running Windows, use [VMWare Player][vmware-player].
