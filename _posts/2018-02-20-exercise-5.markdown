@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Lesson 6 | Buffer Overflows"
-categories: memory
+title:  "Exercise 5 | Session Hijacking/Man-in-the-Middle"
+categories: web
 ---
 
 If you're on a Mac, go ahead and download [Parallels][parallels], which you can use to run a VM. If you're running Windows, use [VMWare Player][vmware-player].

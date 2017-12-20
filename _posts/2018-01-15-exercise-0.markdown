@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Exercise 0 | Setting Up the Environment"
+categories: tools
+---
+
+You're going to need to get set up with a couple things BEFORE the start of class for Offensive Security 101. These are:
+
+[VirtualBox VM][virtual-box]; the installation should be fairly self explanatory for both Windows and Mac OS.
+
+[Kali Linux][kali], either the standard 64-bit .iso or OSCP's VirtualBox image. Once the file is downloaded, it needs to be installed/run using VirtualBox (somewhat less self explanatory). A thorough guide can be found [here][iso-guide]. I would recommend allocating 4-8GB of RAM and 20GB of disk space. Note that it's simpler (and common for professional pen-testers) to run this as a "Live USB", the disadvantage being that data is not persistent.
+
+It's also highly recommended (though not necessary) to install [Guest Additions][ga-guide], as it makes working with the VM far more seemless. N.B. I had to run:
+
+```
+apt-get update
+apt-get dist-upgrade
+```
+
+for this to work properly.
+
+
+
+Please download and set these in advance, as they are fairly large in terms of file-size, and you will not be able to complete the exercises otherwise. There are some "gotcha's" in terms of setting everything up, so if you run into any trouble that the internet cannot solve, feel free to message any of the course staff.
+
+
+[virtual-box]: https://www.virtualbox.org/
+[kali]: [https://www.kali.org/]
+[iso-guide]: https://connectwww.com/how-to-install-kali-linux-on-oracle-virtualbox-best-linux-os-for-penetration-testing/5180/
+[ga-guide]: https://docs.kali.org/general-use/kali-linux-virtual-box-guest

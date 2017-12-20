@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lesson 1 | Kali Linux"
+title:  "Exercise 1 | Kali Linux"
 categories: tools
 ---
 
