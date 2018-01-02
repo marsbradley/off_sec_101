@@ -7,9 +7,9 @@ transition: slide
 
 <section>
 
-<img  width="300px"  src="https://marsbradley.github.io/off_sec_101/assets/images/code_academy.png">
+<img  width="300px" src="{{site.baseurl}}/assets/images/code_academy.png">
 
-<img width="300px"  src="https://marsbradley.github.io/off_sec_101/assets/images/kali.png">
+<img width="300px" src="{{site.baseurl}}/assets/images/kali.png">
 
 <h2> Offensive Security 101</h2>
 

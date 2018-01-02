@@ -4,7 +4,6 @@ title: About
 permalink: /about/
 ---
 
-
 ## What is this?
 This is a lesson plan for a course covering variety of methods and tools of interest to the budding hacker. This course assumes no prior knowledge of security concepts (other than the very basic) and techniques, but is aimed at those with a technical computer science background.
 
