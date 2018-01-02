@@ -1,10 +1,35 @@
 ---
 layout: post
-title:  "Exercise 1 | Kali Linux"
+title:  "Exercise 1 | Forensics"
 categories: tools
 ---
 
+You can find the required source code here, in the master branch of the project's repository. Good luck!
 
-Kali Linux:
-Kali Linux is a Linux distribution designed for digital forensics and penetration testing, and other security-related purposes.
-It comes with over 600 pre-installed programs, such as Nmap, Wireshark, Burp Suite, and OWASP ZAP.
+### Question 1:
+
+Run the file ```exercise-1/foxy```. Can you figure out what the fox says?
+
+**Bonus:** You should also be able to discover what the fox says without simply reading the contents of the executable, as it is vulnerable to an attack similar to the one demoed in the taster session. Can you find out what the fox said using this method instead?
+
+### Question 2:
+
+You met one of your oldest gamer friends in the online game Roblox, the aptly named "bugman846". Unfortunately over the years you've forgotten how to get in touch with them. However, thanks to your elite hacker skills obtaining a dump of the game's SQL database was easy, and is contained within ```exercise-1/roblox```. Can you find your friend's email address?
+
+**Bonus:** There was another friend of yours, but you can't even remember their username; only that it began with a "g" and ended with "4". Can you find their email as well?
+
+### Question 3:
+
+The file ```exercise-1/parcel``` is more than meets the eye. Figure out how to "unwrap" the present contained within!
+
+**Bonus:** There is more than meets the eye to your unwrapped gift. Did the creator forget to delete something? What did the gift look like before?
+
+### Additional Practice:
+
+### Question 4 - [Undisputed][UNDISPUTED]
+### Question 5 - [Clutter][CLUTTER]
+### Question 6 - [Noobhome][NOOBHOME]
+
+[UNDISPUTED]: https://backdoor.sdslabs.co/challenges/UNDISPUTED
+[CLUTTER]: https://backdoor.sdslabs.co/challenges/CLUTTER
+[NOOBHOME]: https://backdoor.sdslabs.co/challenges/NOOBHOME

@@ -20,7 +20,7 @@ transition: slide
 <section>
 
 <h3>Course Structure</h3>
-<p>
+<p class="fragment">
 The course is divided into two segments per class:
 <ul>
 <li class="fragment">Presentation to introduce new concepts</li>
@@ -36,7 +36,7 @@ The course is divided into two segments per class:
 <section>
 
 <h3>What this course is</h3>
-<p>
+<p class="fragment">
 The course is designed to provide the following:
 <ul>
 <li class="fragment">Introduction to Computer Security</li>
@@ -51,7 +51,7 @@ The course is designed to provide the following:
 
 <h3>What this course is not</h3>
 
-<img class="fragment" width="600px" src="{{ site.baseurl }}/assets/images/google.png">
+<img class="fragment" width="600px" src="{{site.baseurl}}/assets/images/google.png">
 
 </section>
 
@@ -70,6 +70,12 @@ The course is designed to provide the following:
 _DO NOT attack machines that do not belong to you._
 
 _This class is for educational purposes only!_
+
+</section>
+
+<section data-markdown>
+	
+## What's so Offensive, mate?
 
 </section>
 
@@ -106,15 +112,21 @@ _"A malicious party cannot prevent me or those with permissions from accessing m
 
 </section>
 
+<section data-markdown>
+
+## What is forensics?
+
+</section>
+
 <section data-markdown data-transition="slide-in fade-out">
 
-## What is Kali Linux?
+## Why Kali Linux?
 
 </section>
 
 <section data-transition="fade-in slide-out">
 
-<h2>What is <span style="color:#353535;">Kali</span> Linux?</h2>
+<h2>Why <span style="color:#353535;">Kali</span> Linux?</h2>
 
 </section>
 
