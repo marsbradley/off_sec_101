@@ -1,18 +1,10 @@
 # Offensive Security 101 
 
 ## What is this?
-This is a lesson plan for a course covering variety of methods and tools of interest to the budding hacker. This course assumes no prior knowledge of security concepts (other than the very basic) and techniques, but is aimed at those with a technical computer science background.
+This course covers variety of methods and tools used by the budding hacker/offensive security professional. It assumes no prior knowledge of security concepts and skills (other than the very basic), but is aimed at those with a somewhat technical computer-science background.
 
 ## How does this work?
-The lesson plan is divided up into 8 topics/chunks, with a initial session dedicated to preparing the necessary environment for later lessons (intended to be performed before the students attend lesson 1). The students will need to use VMs throughout the course so having a machine that is capable of running VM Player with a VM or two at the same time is necessary. 
+The course is divided up into roughly 8 topics/chunks. Each week the upcoming lesson will be release a day or two before the lesson is given. Accompanying exercises of varying difficulty will also be made available, which are to be attempted by students during the class. Content will remain available for the duration of the course, should students want a refresher at any point.
 
-## Lesson plan
-0. Getting the environment set up
-1. Tools: Kali Linux
-2. Network: Analysis and Recon
-3. Network: Exploiting Weakness
-4. Web: SQL Injection/Cross-site Scripting 
-5. Web: Session Hijacking/Man-in-the-Middle
-6. Memory: Buffer Overflows 
-7. Memory: Use After Free
-8. Crypto: Breaking hashes
+## What are the requirements?
+Students will need to use VMs throughout the course so having a machine that is capable of running VirtualBox. Students should also be able to dedicate some time each week to practice the techniques outside of class, particularly if they do not complete all the exercises assigned each week.
