@@ -21,7 +21,7 @@ for this to work properly.
 
 
 
-Please download and set these in advance, as they are fairly large in terms of file-size, and you will not be able to complete the exercises otherwise. There are some "gotcha's" in terms of setting everything up, so if you run into any trouble that the internet cannot solve, feel free to message any of the course staff.
+Please download and set these up in advance, as they are fairly large files, and you will probably not be able to complete the exercises otherwise. There are some "gotcha's" in terms of setting everything up, so if you run into any trouble that the internet cannot solve, feel free to message any of the course staff.
 
 
 [virtual-box]: https://www.virtualbox.org/

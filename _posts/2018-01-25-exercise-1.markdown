@@ -4,7 +4,7 @@ title:  "Exercise 1 | Forensics"
 categories: tools
 ---
 
-You can find the required source code here, in the master branch of the project's repository. Good luck!
+You can find the required source code [here][repository], in the master branch of the project's repository. Good luck!
 
 ### Question 1:
 
@@ -30,6 +30,7 @@ The file ```exercise-1/parcel``` is more than meets the eye. Figure out how to "
 ### Question 5 - [Clutter][CLUTTER]
 ### Question 6 - [Noobhome][NOOBHOME]
 
+[repository]: https://github.com/marsbradley/off_sec_101
 [UNDISPUTED]: https://backdoor.sdslabs.co/challenges/UNDISPUTED
 [CLUTTER]: https://backdoor.sdslabs.co/challenges/CLUTTER
 [NOOBHOME]: https://backdoor.sdslabs.co/challenges/NOOBHOME
