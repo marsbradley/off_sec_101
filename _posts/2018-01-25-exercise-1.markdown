@@ -20,9 +20,9 @@ You met one of your oldest gamer friends in the online game Roblox, the aptly na
 
 ### Question 3:
 
-The file ```exercise-1/parcel``` is more than meets the eye. Figure out how to "unwrap" the present contained within!
+The file ```exercise-1/parcel``` contains more than meets the eye. Figure out how to "unwrap" the present contained within!
 
-**Bonus:** There is more than meets the eye to your unwrapped gift. Did the creator forget to delete something? What did the gift look like before?
+**Bonus:** There is **EVEN MORE** that meets the eye to your unwrapped gift. Did the creator forget to delete something? What did the gift look like before?
 
 ### Additional Practice:
 

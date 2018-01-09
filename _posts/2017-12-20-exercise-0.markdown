@@ -25,6 +25,6 @@ Please download and set these up in advance, as they are fairly large files, and
 
 
 [virtual-box]: https://www.virtualbox.org/
-[kali]: [https://www.kali.org/]
+[kali]: https://www.kali.org/
 [iso-guide]: https://connectwww.com/how-to-install-kali-linux-on-oracle-virtualbox-best-linux-os-for-penetration-testing/5180/
 [ga-guide]: https://docs.kali.org/general-use/kali-linux-virtual-box-guest
