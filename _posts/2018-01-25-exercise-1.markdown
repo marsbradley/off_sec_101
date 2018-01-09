@@ -16,7 +16,7 @@ Run the file ```exercise-1/foxy```. Can you figure out what the fox says?
 
 You met one of your oldest gamer friends in the online game Roblox, the aptly named "bugman846". Unfortunately over the years you've forgotten how to get in touch with them. However, thanks to your elite hacker skills obtaining a dump of the game's SQL database was easy, and is contained within ```exercise-1/roblox```. Can you find your friend's email address?
 
-**Bonus:** There was another friend of yours, but you can't even remember their username; only that it began with a "g" and ended with "4". Can you find their email as well?
+**Bonus:** There was another friend of yours, but you can't even remember their username; only that it began with a "g" and ended with "r". Can you find their email as well?
 
 ### Question 3:
 
