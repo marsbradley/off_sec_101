@@ -1,7 +1,6 @@
 ---
 layout: slide
 title:  "Presentation 1 | Forensics"
-description: You have to look in the right places to find stuff
 transition: slide
 ---
 

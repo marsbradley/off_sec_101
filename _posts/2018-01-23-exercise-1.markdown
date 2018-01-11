@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Exercise 1 | Forensics"
-categories: tools
 ---
 
 You can find the required source code [here][repository], in the master branch of the project's repository. Good luck!

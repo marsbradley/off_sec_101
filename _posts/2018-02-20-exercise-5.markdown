@@ -1,0 +1,6 @@
+---
+layout: post
+title:  "Exercise 5 | Cross-site Scripting"
+---
+
+This is a template, you shouldn't be seeing this...

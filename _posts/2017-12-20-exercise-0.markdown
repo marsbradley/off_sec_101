@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Exercise 0 | Setting Up the Environment"
-categories: tools
 ---
 
 You're going to need to get set up with a couple things BEFORE the start of class for Offensive Security 101. These are:

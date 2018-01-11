@@ -1,7 +1,6 @@
 ---
 layout: slide
 title:  "Taster Presentation | An Intro to Computer Security"
-description: A 5 Minute Introduction to Computer Security
 transition: slide
 ---
 
