@@ -5,19 +5,13 @@ transition: slide
 ---
 
 <section>
-
 <img width="300px" src="{{site.baseurl}}/assets/images/code_academy.png">
-
 <img width="300px" src="{{site.baseurl}}/assets/images/kali.png">
-
 <h2>Offensive Security 101</h2>
-
 <p><i>Forensics</i></p>
-
 </section>
 
 <section>
-
 <h3>Course Structure</h3>
 <p class="fragment">
 The course is divided into two segments per class:
@@ -29,11 +23,9 @@ The course is divided into two segments per class:
 <br>
 <span class="fragment">Exercise is <b>necessary</b> to improve this kind of skill!</span>
 </p>
-
 </section>
 
 <section>
-
 <h3>What this course is</h3>
 <p class="fragment">
 The course is designed to provide the following:
@@ -43,23 +35,17 @@ The course is designed to provide the following:
 <li class="fragment">Chance to put learned concepts into practice</li>
 </ul>
 </p>
-
 </section>
 
 <section>
 
 <h3>What this course is not</h3>
-
 <img class="fragment" width="600px" src="{{site.baseurl}}/assets/images/google.png">
-
 </section>
 
 <section>
-
 <img width="400px" src="{{site.baseurl}}/assets/images/white_hat.png">
-
 <img width="400px" src="{{site.baseurl}}/assets/images/black_hat.png">
-
 </section>
 
 <section data-markdown>
@@ -136,8 +122,7 @@ _"A malicious party cannot prevent me or those with permissions from accessing m
 </section>
 
 <section>
-
-<h2>strings</h2>
+<h3>strings</h3>
 <ul>
 <li class="fragment">Finds and prints strings embedded in a binary file</li>
 <li class="fragment">Best for smaller binary files, when unsure what you're looking for</li>
@@ -146,7 +131,7 @@ _"A malicious party cannot prevent me or those with permissions from accessing m
 </section>
 
 <section> 
-<h2>grep</h2>
+<h3>grep</h3>
 <ul>
 <li class="fragment">Searches a file for lines matching a given regular expression</li>
 <li class="fragment">Best for searching large files, when you know approximately what you might be looking for</li>
@@ -155,7 +140,7 @@ _"A malicious party cannot prevent me or those with permissions from accessing m
 </section>
 
 <section> 
-<h2>file</h2>
+<h3>file</h3>
 <ul>
 <li class="fragment">Determines the file-type of a given file</li>
 <li class="fragment">Useful when a particular file might be unfamiliar, to figure out its purpose</li>
