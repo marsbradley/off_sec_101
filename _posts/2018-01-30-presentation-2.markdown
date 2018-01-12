@@ -75,6 +75,19 @@ transition: slide
 </section>
 
 <section>
+<h3>ping</h3>
+<ul>
+<li class="fragment">Probably one of the most commonly used network diagnostic tools</li>
+<li class="fragment">Sometimes a device will not respond to ping requests, but if it does it can be useful</li>
+<li class="fragment">E.g. "<code>ping hotels.com</code>"</li>
+</ul>
+</section>
+
+<section>
+<img width="800px" src="{{site.baseurl}}/assets/images/ping.gif">
+</section>
+
+<section>
 <h3>Port Scan</h3>
 <img width="600px" src="{{site.baseurl}}/assets/images/door_knock.gif">
 </section>
@@ -89,10 +102,12 @@ transition: slide
 </section>
 
 <section>
+<img width="800px" src="{{site.baseurl}}/assets/images/nmap.gif">
+</section>
+
+<section>
 <h3>Anatomy of an IP Address</h3>
-<h1><span class="fragment highlight-current-red">107.13.41</span>.
-	<span class="fragment highlight-current-red">120</span>
-	<span class="fragment highlight-current-red">/24</span></h1>
+<h1><span class="fragment highlight-current-red">192.168.1</span>.<span class="fragment highlight-current-red">0</span><span class="fragment highlight-current-red">/24</span></h1>
 </section>
 
 <section>
@@ -110,12 +125,20 @@ transition: slide
 </section>
 
 <section>
+<img width="800px" src="{{site.baseurl}}/assets/images/nslookup.gif">
+</section>
+
+<section>
 <h3>whois</h3>
 <ul>
 <li class="fragment">Performs WHOIS database lookups</li>
 <li class="fragment">Useful to find out who an address legally belongs to</li>
 <li class="fragment">E.g. <code>whois google.com</code></li>
 </ul>
+</section>
+
+<section>
+<img width="800px" src="{{site.baseurl}}/assets/images/whois.gif">
 </section>
 
 <section>
