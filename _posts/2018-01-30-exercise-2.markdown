@@ -3,4 +3,42 @@ layout: post
 title:  "Exercise 2 | Recon"
 ---
 
-This is a template, you shouldn't be seeing this...
+In the first 4 questions, we are concerned with the system at IP address 45.33.32.156. Please **DO NOT** use pen-testing tools against any other device.
+
+We have intel that this device at 45.33.32.156 may be key to orchestrating a number of DDoS attacks against HCom's infrastructure. We need to find out as much information on the server as possible...
+
+### Question 1:
+
+Can you establish if the device is alive? Does the device respond to ping requests? What's the approximate round-trip-time?
+
+### Question 2:
+
+Has the device got a DNS name assigned? Who might the device belong to? What is the company name and registered address of the device owner?
+
+### Question 3:
+
+What ports on the device are open? Do you have any idea of what operating system the device might be running?
+
+### Question 4 (Hard):
+
+We believe that HTTP may be the protocol being used to control the botnet that's causing the DDoS attack. Therefore we'd like to determine what HTTP methods (GET, POST, DELETE...) the service at 45.33.32.156 supports. 
+
+Using `netcat`[^1], send an HTTP OPTIONS request to figure out what the supported methods are...
+
+- You need to know the [syntax][SYNTAX] for an HTTP OPTIONS request
+- You need to know about any **mandatory** [HTTP header fields][HEADERS]
+- You need to know that HTTP only accepts `CRLF` as the line-ending. Is there an option to [force this][MANUAL] in `netcat`?
+
+### Additional Practice:
+
+### Question 5 - [Path][PATH]
+### Question 6 - [Bandit][BANDIT]
+
+[^1]: Yes, this is kind of like using a garden trowel to dig the foundation for a skyscaper, but it's good practice! In reality, you'd be a lot better off using `curl`...
+
+[SYNTAX]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS
+[HEADERS]: https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+[MANUAL]: https://linux.die.net/man/1/nc
+
+[PATH]: https://backdoor.sdslabs.co/challenges/PATH
+[BANDIT]: http://overthewire.org/wargames/bandit/

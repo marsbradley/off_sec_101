@@ -66,6 +66,7 @@ transition: slide
 <li class="fragment">Ping<span class="fragment">: does a device respond to a ping request?</span></li>
 <li class="fragment">Port scan<span class="fragment">: does a device have any open ports?</span></li>
 <li class="fragment">NSLookup/WHOIS<span class="fragment">: are there any DNS/WHOIS records for a device?</span></li>
+<li class="fragment">Netcat<span class="fragment">: can we interact with a device?</span></li>
 </ul>
 </section>
 
@@ -118,7 +119,7 @@ transition: slide
 <section>
 <h3>nslookup</h3>
 <ul>
-<li class="fragment">A tool  to perform DNS lookups</li>
+<li class="fragment">A tool to perform DNS lookups</li>
 <li class="fragment">Useful to figure out if an IP has any DNS records assigned</li>
 <li class="fragment">E.g. <code>nslookup 209.191.122.70</code></li>
 </ul>
@@ -139,6 +140,27 @@ transition: slide
 
 <section>
 <img width="800px" src="{{site.baseurl}}/assets/images/whois.gif">
+</section>
+
+<section>
+<h3>Netcat</h3>
+<img width="600px" src="{{site.baseurl}}/assets/images/screaming.gif">
+</section>
+
+<section>
+<h3>netcat</h3>
+<ul>
+<li class="fragment">A tool to write data to a network connection</li>
+<li class="fragment">Works over either TCP or UDP, literally writing actual bytes to the connection</li>
+<li class="fragment">E.g. <code>netcat www.example.com 80</code><br>
+	<span class="fragment"><code>GET http://www.example.com/ HTTP/1.1</code><br>
+	<code>Host: www.example.com</code></span></li>
+</ul>
+</section>
+
+<section>
+<img width="475px" src="{{site.baseurl}}/assets/images/netcat_server.gif">
+<img width="475px" src="{{site.baseurl}}/assets/images/netcat_client.gif">
 </section>
 
 <section>
