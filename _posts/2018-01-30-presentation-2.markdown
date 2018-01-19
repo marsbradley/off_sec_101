@@ -176,8 +176,8 @@ transition: slide
 
 ### High-level Methods
 
-- Burpsuite
 - DNSdumpster
+- Burpsuite
 - Wireshark (Passive Recon)
 
 </section>
@@ -187,8 +187,8 @@ transition: slide
 ### Prevention
 
 - Firewall
-- Detection tools
 - NAT
+- Detection tools
 
 </section>
 
