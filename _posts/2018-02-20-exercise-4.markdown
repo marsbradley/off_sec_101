@@ -1,6 +1,134 @@
 ---
-layout: post
-title:  "Exercise 4 | Web Injection"
+layout: slide
+title:  "Presentation 4 | Web Injection"
+transition: slide
 ---
 
-This is a template, you shouldn't be seeing this...
+<section>
+
+<img width="300px" src="{{site.baseurl}}/assets/images/code_academy.png">
+
+<img width="300px" src="{{site.baseurl}}/assets/images/kali.png">
+
+<h2>Offensive Security 101</h2>
+
+<p><i>Web Injection</i></p>
+
+</section>
+
+<section>
+	<h3>Disclaimer</h3>
+	<p><i>Attacking networks is illegal; could get you arrested...</i></p>
+	<p class="fragment"><i>...or even worse, fired!</i></p>
+</section>
+
+<section data-markdown>
+
+### Web Injection
+- One of the most common vulnerabilities
+- Top OWASP Security Risk
+- SQL, NoSQL, LDAP, Command Injection etc.
+</section>
+
+<section data-markdown>
+haveibeenpwned.com
+</section>
+
+<section data-markdown>
+## SQL Injection
+</section>
+
+<section data-markdown>
+### SQL
+- Structured Query Language
+- Relational Database Management System
+- MySQL, Oracle, MS SQL Server, PostgreSQL
+</section>
+
+<section>
+<h3>SQL</h3>
+<pre>
+<code data-lang="mysql">SELECT username, password FROM users WHERE user='alice';
+INSERT INTO users ('bob', 'password');
+DELETE FROM users WHERE user='alice';
+</code>
+</pre>
+</section>
+
+<section>
+<h3>Impact</h3>
+<ul>
+<li class="fragment">Steal Data</li>
+<li class="fragment">Spoof Identity</li>
+<li class="fragment">Remove/Corrupt Data</li>
+<li class="fragment">Compromise Server</li>
+</ul>
+</section>
+
+<section>
+<h3>SQL Injection</h3>
+<pre>
+<code data-lang="mysql">SELECT * FROM users 
+WHERE user='*username*' AND password='*password*';</code>
+</pre>
+
+<pre>
+<code data-lang="mysql">SELECT * FROM users
+WHERE username='alice' AND password='123456';
+
+SELECT * FROM users
+WHERE username='admin' AND password='qwerty';
+</code>
+</pre>
+</section>
+
+<section>
+<h3>SQL Injection</h3>
+
+<pre>
+<code data-lang="mysql">SELECT * FROM users 
+WHERE user='*username*' AND password='*password*';</code>
+</pre>
+
+<pre class="fragment">
+<code data-lang="mysql">username = "alice';-- "</code>
+</pre>
+
+<pre class="fragment">
+<code data-lang="mysql">SELECT * FROM tableName
+WHERE username='alice';-- ' AND password='*password*';</code>
+</pre>
+</section>
+
+<section data-markdown>
+### SQL Injection
+<span class="fragment">SELECT column1, column2 FROM tableName WHERE username='alice' or 1=1;#;</span>
+<span class="fragment">SELECT column1, column2 FROM tableName WHERE username='alice'; DROP users;#;</span>
+<span class="fragment">SELECT column1, column2 FROM tableName WHERE username='admin' 
+UNION SELECT anotherColumn1, anotherColumn2 from table2Name;-- ;</span>
+<span class="fragment">SELECT column1, column2 FROM tableName WHERE username='admin' AND SLEEP(15)#;</span>
+
+</section>
+
+<section data-markdown>
+### Prevention
+- Escape dangerous characters (how to bypass? use CHAR and CONCAT?)
+- Blacklisting (how to bypass? comments, casing, encoding etc.)
+- Managing Privileges
+- Prepared Statements (how to bypass?)
+
+</section>
+
+<section data-markdown>
+### Resources
+- Computerphile
+- Cheatsheets
+- DVWA, WebGoat
+
+</section>
+
+<section data-markdown>
+
+## Fin
+
+</section>
