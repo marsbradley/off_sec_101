@@ -62,7 +62,7 @@ haveibeenpwned.com
 </section>
 
 <section>
-<h3>SQL</h3>
+<h3>SQL 101</h3>
 <table class="fragment">
 	<caption>users</caption>
 	<tr>
@@ -109,20 +109,22 @@ DELETE FROM users WHERE id=1;
 
 <section>
 <h3>SQL Injection</h3>
-<img class="fragment" width="500px" src="{{site.baseurl}}/assets/images/web_request_with_db.svg"><br />
-<img class="fragment" width="500px" src="{{site.baseurl}}/assets/images/unexpected_web_request_with_db.svg">
+<img class="fragment" width="700px" src="{{site.baseurl}}/assets/images/web_request_with_db.svg"><br />
+<img class="fragment" width="700px" src="{{site.baseurl}}/assets/images/unexpected_web_request_with_db.svg">
 </section>
 
 <section>
-<h3>SQL Injection</h3>
+<h3>SQL Normal Usage</h3>
 <pre>
 <code class="mysql">SELECT * FROM users 
 WHERE username='$username' AND password='$password';</code>
 </pre>
-<pre>
+<pre class="fragment">
 <code class="php">$username = "alice"
 $password = "123456"
 </code>
+</pre>
+<pre class="fragment">
 <code class="mysql">SELECT * FROM users
 WHERE username='alice' AND password='123456';
 </code>
@@ -145,7 +147,7 @@ WHERE username='alice';-- ' AND password='$password';</code>
 </section>
 
 <section>
-<h3>SQL Injection</h3>
+<h3>More SQL Injection</h3>
 <pre>
 <code class="mysql">SELECT * FROM users 
 WHERE username='alice' OR 1=1;-- ' AND password=...</code>
