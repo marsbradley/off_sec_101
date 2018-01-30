@@ -229,7 +229,7 @@ color: black; font-size: 70px; letter-spacing: 15px;">10011011</b></span>
 ### Disadvantages
 - Usually less secure than symmetric algorithms for a similar key length
 - Conceptually more difficult
-- Potentially more room for mistakes
+- Potentially more room for end-user mistakes
 
 </section>
 
