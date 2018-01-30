@@ -1,7 +1,7 @@
 ---
 layout: slide
 title:  "Presentation 2 | Recon"
-transition: slide
+transition: slide 
 ---
 
 <section>
