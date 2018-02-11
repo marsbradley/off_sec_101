@@ -3,4 +3,90 @@ layout: post
 title:  "Exercise 4 | Web Injection"
 ---
 
-This is a template, you shouldn't be seeing this...
+The exercises are meant to give you some basic practice with SQL injection.
+
+### Setup Exercises
+
+The exercises are a series of PHP web applications connected to a MySQL databases to simulate common real world scenarios where SQL injection may be possible.
+
+#### Install Docker and Docker Compose
+The files are stored in docker images to be deployed with docker-compose. This makes it easier to start up locally, teardown and redeploy if need be.
+
+To install docker in Kali Linux, follow the instructions [here][DOCKER_INSTRUCTIONS]:
+
+If you get this error during apt-get update:
+
+```
+The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository <devel@kali.org>
+```
+
+It means one of the certificates for the kali repositories expired, try updating it with the following command:
+
+```wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add```
+
+Afterwards, to install docker-compose in Kali Linux, run the following:
+
+```apt-get install docker-compose```
+
+
+#### Load Exercises
+Download the docker images tar [here][EXERCISE_TAR]
+
+Extract with:
+
+```tar -xzvf sqli-exercises.tar.gz```
+
+Go into the directory and run:
+
+```docker-compose up --build```
+
+This may take some time to complete as it downloads the base docker images for the first time.
+
+At the end, if all goes according to plan you should see the exercises by opening your browser and going to localhost.
+
+### Exercise 1:
+
+You should see the 'Offensive Security Cheese Store'. Try to search through the cheeses available using the search box.
+For example try searching 'camembert', you should get back some results for Camembert cheese.
+
+Try to get the password of the 'admin' user with sql injection.
+
+### Exercise 2:
+
+This is a slightly improved version of the cheese store.
+
+The developer has escaped inputs using '[real-escape-string][MYSQL_ESCAPE_STRING_DOCS]'.
+
+Try to get the password of the 'admin' user with this version.
+
+**Note:** The table names are the same as in Exercise 1.
+
+**Hint:**
+Is there another input used in the url?
+
+### Exercise 3:
+
+The input in exercise 2 has been removed now.
+
+Try to get the password of the 'admin' user with this version.
+
+**Note:** The table names are the same as in Exercise 1.
+
+**Hint:**
+PHP can use POST requests to send data between the client and the server.
+You can see network requests using the Firefox browser installed on Kali.
+
+### Additional Practice:
+
+TBD
+
+### Useful Links:
+
+[SQL Injection Cheat Sheet][NETSPARKER_CHEAT_SHEET]
+
+[DOCKER_INSTRUCTIONS]: https://medium.com/@airman604/installing-docker-in-kali-linux-2017-1-fbaa4d1447fe
+[EXERCISE_TAR]: {{site.baseurl}}/assets/sqli_exercises.tar.gz
+[MYSQL_ESCAPE_STRING_DOCS]: http://php.net/manual/en/mysqli.real-escape-string.php
+
+[NETSPARKER_CHEAT_SHEET]: https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+
