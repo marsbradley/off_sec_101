@@ -196,7 +196,7 @@ color: black; font-size: 70px; letter-spacing: 15px;">10011011</b></span>
 
 ### Disadvantages
 - Secure channel required for initial key exchange
-- Not goods for authentication
+- Not good for authentication
 - Key re-use an issue
 
 </section>
@@ -205,6 +205,46 @@ color: black; font-size: 70px; letter-spacing: 15px;">10011011</b></span>
 
 ## Asymmetric-key Cryptography (Public-key)
 
+_More useful, but harder to understand..._
+
+</section>
+
+<section>
+<span style="filter: invert(80%);">
+<img width="150px" src="{{site.baseurl}}/assets/images/file.png">
+<span class="fragment">
+<img width="100px" style="margin-top: -55px; margin-left: -10px; position: absolute;" src="{{site.baseurl}}/assets/images/locked.png">
+<img width="150px" src="{{site.baseurl}}/assets/images/arrow.png">
+<b style="margin-top: 170px; margin-left: -150px; position: absolute; color: black; font-size: 50px;">public<br> key</b>
+</span>
+<img class="fragment" width="150px" src="{{site.baseurl}}/assets/images/encrypted_file.png">
+<span class="fragment">
+<img width="100px" style="margin-top: -55px; margin-left: -10px; position: absolute;" src="{{site.baseurl}}/assets/images/unlocked.png">
+<img width="150px" src="{{site.baseurl}}/assets/images/arrow.png">
+<b style="margin-top: 170px; margin-left: -165px; position: absolute; color: black; font-size: 50px;">private<br> key</b>
+</span>
+<img class="fragment" width="150px" src="{{site.baseurl}}/assets/images/file.png">
+</span>
+</section>
+
+<section data-markdown>
+
+## How can a different key open the same lock?
+
+</section>
+
+<section>
+
+<span style="filter: invert(100%);">
+<img width="430px" src="{{site.baseurl}}/assets/images/paint.png">
+</span>
+</section>
+
+<section>
+
+<span style="filter: invert(100%);">
+<img width="1000px" src="{{site.baseurl}}/assets/images/numbers.jpg">
+</span>
 </section>
 
 <section data-markdown>
@@ -230,6 +270,29 @@ color: black; font-size: 70px; letter-spacing: 15px;">10011011</b></span>
 - Usually less secure than symmetric algorithms for a similar key length
 - Conceptually more difficult
 - Potentially more room for end-user mistakes
+
+</section>
+
+<section data-markdown>
+
+### Attacking Ciphertext
+- Frequency analysis (map the cipher text to the frequency of certain letters in a language)
+- Key reuse attacks: https://crypto.stackexchange.com/questions/59/taking-advantage-of-one-time-pad-key-reuse
+- Bruteforce...
+</section>
+
+<section data-markdown>
+
+### Hashcat
+
+</section>
+
+<section data-markdown>
+
+### Defending Ciphertext
+- Longer keys
+- More secure algorithms
+- Shorter key-lifespan
 
 </section>
 
