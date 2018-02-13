@@ -235,16 +235,12 @@ _More useful, but harder to understand..._
 
 <section>
 
-<span style="filter: invert(100%);">
 <img width="430px" src="{{site.baseurl}}/assets/images/paint.png">
-</span>
 </section>
 
 <section>
 
-<span style="filter: invert(100%);">
-<img width="1000px" src="{{site.baseurl}}/assets/images/numbers.jpg">
-</span>
+<img width="430px" src="{{site.baseurl}}/assets/images/numbers.png">
 </section>
 
 <section data-markdown>
@@ -275,15 +271,97 @@ _More useful, but harder to understand..._
 
 <section data-markdown>
 
-### Attacking Ciphertext
-- Frequency analysis (map the cipher text to the frequency of certain letters in a language)
-- Key reuse attacks: https://crypto.stackexchange.com/questions/59/taking-advantage-of-one-time-pad-key-reuse
-- Bruteforce...
+## Attacking Ciphertext
+
 </section>
 
 <section data-markdown>
 
-### Hashcat
+### Frequency Analysis
+- It's easy to calculate the frequency of given letters in a language
+- Take the most frequent cipher-text letter to be the most frequent letter in a language
+- See if any obvious words jump out
+- Repeat...
+
+</section>
+
+<section data-markdown>
+
+### Key reuse attacks
+
+</section>
+
+<section>
+
+<img width="430px" src="{{site.baseurl}}/assets/images/send_cash.gif">
+
+</section>
+
+<section>
+
+<img width="430px" src="{{site.baseurl}}/assets/images/one_time_pad.gif">
+
+</section>
+
+<section>
+
+<img width="430px" src="{{site.baseurl}}/assets/images/encrypted_cash.gif">
+
+</section>
+
+<section>
+
+<img width="1000px" src="{{site.baseurl}}/assets/images/smiley.png">
+
+</section>
+
+<section>
+
+<img width="430px" src="{{site.baseurl}}/assets/images/encrypted_smiley.gif">
+
+</section>
+
+<section>
+
+<img width="1000px" src="{{site.baseurl}}/assets/images/both_encrypted.png">
+
+</section>
+
+<section>
+
+<img width="430px" src="{{site.baseurl}}/assets/images/both_unencrypted.gif">
+
+</section>
+
+<section data-markdown>
+
+(A ⊕ X) ⊕ (B ⊕ X)
+
+A ⊕ X ⊕ B ⊕ X
+
+A ⊕ B ⊕ X ⊕ X
+
+A ⊕ B
+</section>
+
+<section>
+<span style="filter: invert(87%);">
+<img width="500px" src="{{site.baseurl}}/assets/images/truth_table.png">
+</span>
+</section>
+
+<section data-markdown>
+
+### Bruteforce
+- Often a last resort
+- But not a bad one, powerful especially used in combination with other techniques
+- Automated tools exist and help massively...
+
+</section>
+
+<section data-markdown>
+
+## Hashcat Demo
 
 </section>
 

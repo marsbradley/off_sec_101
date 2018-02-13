@@ -17,14 +17,24 @@ Piuoxidvd xdy pyvvya faygxyuem tutpmdid td t axkiqyuvtam vyeruigxy fla ptuoxtoy 
 
 Ul yjtev pyvvya faygxyuem kidvaihxvilu xukyapiyd t oizyu ptuoxtoy, diuey tpp baivyad baivy dpiorvpm kiffyayuvpm. Rlbyzya, qldv ptuoxtoyd rtzy t ertatevyaidvie kidvaihxvilu brier id dvaluopm tnntayuv iu pluoya vyjvd. Yzyu ptuoxtoy ertuoyd td yjvayqy td falq lpk Yuopidr vl qlkyau Yuopidr (ayotakyk td qxvxtppm xuiuvyppioihpy) drlb dvaluo vayukd iu ayptvyk pyvvya faygxyueiyd.
 
+Hint: 
+<details>
+You might find <a href="http://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html">this tool</a> quite useful, though you could also write your own program!
+</details>
+<br>
+
 ### Question 3:
 
-You've intercepted some traffic from a hacker communicating with their handler. The following two images were sent, and you have a suspicion they're encrypted with the same key. Can you figure out what's in the images?
+You've intercepted some traffic from a hacker communicating with their handler, perhaps about what operating system they're running? The following two images were sent, and you have a suspicion they're encrypted with the same key. Can you figure out what's in the images?
 
 ![Encrypted Message 1]({{site.baseurl}}/assets/images/encryption_1.png "Encrypted Message 1")
 ![Encrypted Message 2]({{site.baseurl}}/assets/images/encryption_2.png "Encrypted Message 2")
 
-
+Hint: 
+<details>
+<a href="https://github.com/dtschump/gmic-community/wiki/Blending-modes">GMIC</a> is a cool little image manipulation tool that you <i>might</i> find useful, though you could write your own program!
+</details>
+<br>
 ### Question 4:
 
 A hacker has stolen the following database of user accounts. Can you figure out what the passwords they have stolen are?
@@ -39,9 +49,9 @@ db.users.print()
    "hint": "This password will ROCK YOU with how secure it is..."
 }, {  
    "name": "Bob",
-   "password_hash": "74CEEF982F2F9271EB333FCB941573EDDF353857EEA79197C3DDA4138044B9D2",
+   "password_hash": "5C5D815F4BA5057E15F221884285780BA366AC07FA2300B1A8615CDF419ED8FB",
    "type": "SHA256",
-   "hint": "My favourite 10-digit number :)"
+   "hint": "I love this 7-digit number :)"
 }, {  
    "name": "Charlie",
    "password_hash": "6eea9b7ef19179a06954edd0f6c05ceb",
