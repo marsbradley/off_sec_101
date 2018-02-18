@@ -12,7 +12,8 @@ The exercises are a series of PHP web applications connected to a MySQL database
 #### Install Docker and Docker Compose
 The files are stored in docker images to be deployed with docker-compose. This makes it easier to start up locally, teardown and redeploy if need be.
 
-To install docker in Kali Linux, follow the instructions [here][DOCKER_INSTRUCTIONS]:
+#### On Kali Linux
+To install docker in Kali Linux, follow the instructions [here][DOCKER_KALI_INSTRUCTIONS]:
 
 If you get this error during apt-get update:
 
@@ -27,6 +28,12 @@ It means one of the certificates for the kali repositories expired, try updating
 Afterwards, to install docker-compose in Kali Linux, run the following:
 
 ```apt-get install docker-compose```
+
+#### On Other Platforms
+If you don't want to/have trouble installing docker and docker-compose on Kali Linux, you can also run on other platforms, for example Mac and Windows (if you haven't already got them installed).
+
+Instructions for installing Docker can be found [here][DOCKER_INSTRUCTIONS].  
+Instructions for installing Docker-Compose can be found [here][DOCKER_COMPOSE_INSTRUCTIONS].
 
 
 #### Load Exercises
@@ -87,22 +94,35 @@ docker-compose down
 docker-compose up
 ```
 
-
 **Hint:**
 Prepared statements have not been used in all areas of the site.
 What kind of sql query would be used to change a user's password?
 
 ### Additional Practice:
 
-TBD
+### Other Vulnerable Web Apps
+There are many other (better) vulnerable web applications built to practice various penetration testing techniques, including web injection attacks.
+Feel free to try out other vulnerable web applications, for example:
+- [OWASP WebGoat Project][WEBGOAT]
+- [Mutillidae][MUTILLIDAE]
+
+### [Bandit][BANDIT]
+
+Please continue with the Bandit exercises from the previous sessions. If you need help getting started, please call one of us over. **N.B.** in order to be able to ssh sucessfully, you must use the **vpn network**, as the port is likely blocked on Corporate WiFi.
+
 
 ### Useful Links:
 
 [SQL Injection Cheat Sheet][NETSPARKER_CHEAT_SHEET]
 
-[DOCKER_INSTRUCTIONS]: https://medium.com/@airman604/installing-docker-in-kali-linux-2017-1-fbaa4d1447fe
+[DOCKER_KALI_INSTRUCTIONS]: https://medium.com/@airman604/installing-docker-in-kali-linux-2017-1-fbaa4d1447fe
+[DOCKER_INSTRUCTIONS]: https://docs.docker.com/install/#supported-platforms
+[DOCKER_COMPOSE_INSTRUCTIONS]: https://docs.docker.com/compose/install/
 [EXERCISE_TAR]: {{site.baseurl}}/assets/sqli_exercises.tar.gz
 [MYSQL_ESCAPE_STRING_DOCS]: http://php.net/manual/en/mysqli.real-escape-string.php
+[BANDIT]: http://overthewire.org/wargames/bandit/
+[WEBGOAT]: https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+[MUTILLIDAE]: https://sourceforge.net/projects/mutillidae/
 
 [NETSPARKER_CHEAT_SHEET]: https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
 
