@@ -62,7 +62,7 @@ Try to get the password of the 'admin' user with this version.
 **Note:** The table names are the same as in Exercise 1.
 
 **Hint:**
-Is there another input used in the url?
+Have a look at the url in the browser.
 
 ### Exercise 3:
 
@@ -73,8 +73,24 @@ Try to get the password of the 'admin' user with this version.
 **Note:** The table names are the same as in Exercise 1.
 
 **Hint:**
-PHP can use POST requests to send data between the client and the server.
 You can see network requests using the Firefox browser installed on Kali.
+
+### Exercise 4:
+
+The 'Offensive Security Bank' has a user 'bob. Prepared Statements are used, but see if you can find out his current balance.
+
+An example user you can log in as is: username 'alice' with password '123456'.
+
+If you want to reset the database after some changes, you can reset with:
+```
+docker-compose down
+docker-compose up
+```
+
+
+**Hint:**
+Prepared statements have not been used in all areas of the site.
+What kind of sql query would be used to change a user's password?
 
 ### Additional Practice:
 
