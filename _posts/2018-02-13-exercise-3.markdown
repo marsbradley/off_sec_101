@@ -3,4 +3,67 @@ layout: post
 title:  "Exercise 3 | Cryptography"
 ---
 
-This is a template, you shouldn't be seeing this...
+### Dhrfgvba 1:
+
+Guvf vf n cerggl fvzcyr fgnegvat dhrfgvba, ubcrshyyl vg qbrfa'g fghzc nal bs lbh gbb zhpu?
+
+### Gxydvilu 2:
+
+Vry faygxyuem lf pyvvyad iu vyjv rtd hyyu dvxkiyk fla xdy iu eamnvtutpmdid, tuk faygxyuem tutpmdid iu ntaviexpta, ktviuo htec vl vry Iatgi qtvryqtvieitu Tp Ciuki, brl flaqtppm kyzyplnyk vry qyvrlk (vry einryad haytcthpy hm vrid vyeruigxy ol htec tv pytdv vl vry Etydta einrya iuzyuvyk hm Sxpixd Etydta, dl vrid qyvrlk elxpk rtzy hyyu yjnplayk iu eptddietp viqyd). 
+
+Pyvvya faygxyuem tutpmdid otiuyk tkkivilutp iqnlavtuey iu Yxalny bivr vry kyzyplnqyuv lf qlzthpy vmny iu flxavyyu-fifvm TK, bryay luy qxdv ydviqtvy vry tqlxuv lf vmny aygxiayk fla yter pyvvyaflaq, td yzikyueyk hm vry ztaitvilud iu pyvvya elqntavqyuv diwy iu vmnloatnrya'd vmny etdyd. 
+
+Piuoxidvd xdy pyvvya faygxyuem tutpmdid td t axkiqyuvtam vyeruigxy fla ptuoxtoy ikyuvifietvilu, bryay iv'd ntaviexptapm yffyevizy td tu iukietvilu lf bryvrya tu xuculbu baiviuo dmdvyq id tpnrthyvie, dmppthpie, la ikyloatnrie. 
+
+Ul yjtev pyvvya faygxyuem kidvaihxvilu xukyapiyd t oizyu ptuoxtoy, diuey tpp baivyad baivy dpiorvpm kiffyayuvpm. Rlbyzya, qldv ptuoxtoyd rtzy t ertatevyaidvie kidvaihxvilu brier id dvaluopm tnntayuv iu pluoya vyjvd. Yzyu ptuoxtoy ertuoyd td yjvayqy td falq lpk Yuopidr vl qlkyau Yuopidr (ayotakyk td qxvxtppm xuiuvyppioihpy) drlb dvaluo vayukd iu ayptvyk pyvvya faygxyueiyd.
+
+Hint: 
+<details>
+You might find <a href="http://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html">this tool</a> quite useful, though you could also write your own program!
+</details>
+<br>
+
+### Question 3:
+
+You've intercepted some traffic from a hacker communicating with their handler, perhaps about what operating system they're running? The following two images were sent, and you have a suspicion they're encrypted with the same key. Can you figure out what's in the images?
+
+![Encrypted Message 1]({{site.baseurl}}/assets/images/encryption_1.png "Encrypted Message 1")
+![Encrypted Message 2]({{site.baseurl}}/assets/images/encryption_2.png "Encrypted Message 2")
+
+Hint: 
+<details>
+<a href="https://github.com/dtschump/gmic-community/wiki/Blending-modes">GMIC</a> is a cool little image manipulation tool that you <i>might</i> find useful, though you could write your own program!
+</details>
+<br>
+### Question 4:
+
+A hacker has stolen the following database of user accounts. Can you figure out what the passwords they have stolen are?
+
+```
+db.users.print()
+
+{  
+   "name": "Alice",
+   "password_hash": "2AE280B7B47499A3D8E51FA136C1B97F2F0533C5F5F95C49094A2A39B3FB891D",
+   "type": "SHA256",
+   "hint": "This password will ROCK YOU with how secure it is..."
+}, {  
+   "name": "Bob",
+   "password_hash": "5C5D815F4BA5057E15F221884285780BA366AC07FA2300B1A8615CDF419ED8FB",
+   "type": "SHA256",
+   "hint": "I love this 7-digit number :)"
+}, {  
+   "name": "Charlie",
+   "password_hash": "6eea9b7ef19179a06954edd0f6c05ceb",
+   "type": "MD5"
+}
+
+```
+
+### Additional Practice:
+
+### Question 5 - [Bandit][BANDIT]
+
+Please continue with the Bandit exercises we started (somewhat unsucessfully) last session. If you need help getting started, please call one of us over. **N.B.** in order to be able to ssh sucessfully, you must use the **vpn network**, as the port is likely blocked on Corporate WiFi.
+
+[BANDIT]: http://overthewire.org/wargames/bandit/
