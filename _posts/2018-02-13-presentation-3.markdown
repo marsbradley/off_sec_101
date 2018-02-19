@@ -333,15 +333,27 @@ _More useful, but harder to understand..._
 
 </section>
 
-<section data-markdown>
+<section>
 
+<p style="font-size: 70px">
 (A ⊕ X) ⊕ (B ⊕ X)
-
+<br>
+<span class="fragment">
 A ⊕ X ⊕ B ⊕ X
-
+</span>
+<br>
+<span class="fragment">
 A ⊕ B ⊕ X ⊕ X
-
+</span>
+<br>
+<span class="fragment">
+A ⊕ B ⊕ 0
+</span>
+<br>
+<span class="fragment">
 A ⊕ B
+</span>
+</p>
 </section>
 
 <section>
