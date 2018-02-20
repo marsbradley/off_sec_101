@@ -82,7 +82,7 @@ haveibeenpwned.com
 	</tr>
 </table>
 <pre class="fragment">
-<code class="mysql">SELECT username, password FROM users WHERE user='alice';
+<code class="mysql">SELECT username, password FROM users WHERE username='alice';
 </code>
 </pre>
 <table class="fragment">
@@ -101,7 +101,7 @@ haveibeenpwned.com
 <h3>SQL</h3>
 <pre>
 <code class="mysql">SELECT * FROM users WHERE username='alice';
-INSERT INTO users (3, 'chuck', 'password');
+INSERT INTO users (3, 'charlie', 'password');
 DELETE FROM users WHERE id=1;
 </code>
 </pre>
@@ -146,38 +146,15 @@ WHERE username='alice';-- ' AND password='$password';</code>
 </pre>
 </section>
 
-<section>
-<h3>More SQL Injection</h3>
-<pre>
-<code class="mysql">SELECT * FROM users 
-WHERE username='alice' OR 1=1;-- ' AND password=...</code>
-</pre>
-<pre class="fragment">
-<code class="mysql">SELECT * FROM users WHERE username='alice';
-DROP users;-- ' AND password=...
-</code>
-</pre>
-<pre class="fragment">
-<code class="mysql">SELECT * FROM users WHERE username='alice' 
-UNION SELECT name, address, 1 from staff;-- ' AND password=...
-</code>
-</pre>
-<pre class="fragment">
-<code class="mysql">SELECT * FROM users 
-WHERE username='alice' OR 1=SLEEP(15);-- ' AND password=...
-</code>
-</pre>
-</section>
-
 <section data-markdown>
 ### Demo
 </section>
 
 <section data-markdown>
 
-### Prevention
+### Defense
 - Suppress Errors
-- Sanitize and filter inputs
+- Sanitize Inputs
 - Limiting Privileges
 - Paramaterized Queries
 

@@ -56,7 +56,15 @@ At the end, if all goes according to plan you should see the exercises by openin
 You should see the 'Offensive Security Cheese Store'. Try to search through the cheeses available using the search box.
 For example try searching 'camembert', you should get back some results for Camembert cheese.
 
+This app is vulnerable to SQL Injection, so begin by trying various sql injection attacks.
+
 Try to get the password of the 'admin' user with sql injection.
+
+<details>
+<summary>Hint</summary>  
+The admin details are in another table, so you will want to make use of the MySQL INFORMATION_SCHEMA tables.
+</details>
+<br />
 
 ### Exercise 2:
 
@@ -68,8 +76,11 @@ Try to get the password of the 'admin' user with this version.
 
 **Note:** The table names are the same as in Exercise 1.
 
-**Hint:**
+<details>
+<summary>Hint</summary>  
 Have a look at the url in the browser.
+</details>
+<br />
 
 ### Exercise 3:
 
@@ -80,7 +91,8 @@ Try to get the password of the 'admin' user with this version.
 **Note:** The table names are the same as in Exercise 1.
 
 **Hint:**
-You can see network requests using the Firefox browser installed on Kali.
+<details>You can see network requests using the Firefox browser installed on Kali.</details>
+<br />
 
 ### Exercise 4:
 
@@ -94,9 +106,11 @@ docker-compose down
 docker-compose up
 ```
 
-**Hint:**
-Prepared statements have not been used in all areas of the site.
-What kind of sql query would be used to change a user's password?
+<details>
+<summary>Hint</summary>
+Prepared statements have not been used in all areas of the site. What kind of sql query would be used to change a user's password?
+</details>
+<br />
 
 ### Additional Practice:
 
