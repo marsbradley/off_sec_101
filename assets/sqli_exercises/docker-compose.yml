@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  webserver:
+    image: off_sec_sqli_web
+    build: ./docker/webserver
+    volumes:
+      - ./docker/webserver/src:/var/www/html
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - db
+
+  db:
+    image: off_sec_sqli_db
+    build: ./docker/db
+    volumes:
+      - ./docker/db/init:/docker-entrypoint-initdb.d/
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=docker

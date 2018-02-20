@@ -3,4 +3,140 @@ layout: post
 title:  "Exercise 4 | Web Injection"
 ---
 
-This is a template, you shouldn't be seeing this...
+The exercises are meant to give you some basic practice with SQL injection.
+
+### Setup Exercises
+
+The exercises are a series of PHP web applications connected to a MySQL databases to simulate common real world scenarios where SQL injection may be possible.
+
+#### Install Docker and Docker Compose
+The files are stored in docker images to be deployed with docker-compose. This makes it easier to start up locally, teardown and redeploy if need be.
+
+#### On Kali Linux
+To install docker in Kali Linux, follow the instructions [here][DOCKER_KALI_INSTRUCTIONS]:
+
+If you get this error during apt-get update:
+
+```
+The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository <devel@kali.org>
+```
+
+It means one of the certificates for the kali repositories expired, try updating it with the following command:
+
+```wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add```
+
+Afterwards, to install docker-compose in Kali Linux, run the following:
+
+```apt-get install docker-compose```
+
+#### On Other Platforms
+If you don't want to/have trouble installing docker and docker-compose on Kali Linux, you can also run on other platforms, for example Mac and Windows (if you haven't already got them installed).
+
+Instructions for installing Docker can be found [here][DOCKER_INSTRUCTIONS].  
+Instructions for installing Docker-Compose can be found [here][DOCKER_COMPOSE_INSTRUCTIONS].
+
+
+#### Load Exercises
+Download the docker images tar [here][EXERCISE_TAR]
+
+Extract with:
+
+```tar -xzvf sqli-exercises.tar.gz```
+
+Go into the directory and run:
+
+```docker-compose up --build```
+
+This may take some time to complete as it downloads the base docker images for the first time.
+
+At the end, if all goes according to plan you should see the exercises by opening your browser and going to localhost.
+
+### Exercise 1:
+
+You should see the 'Offensive Security Cheese Store'. Try to search through the cheeses available using the search box.
+For example try searching 'camembert', you should get back some results for Camembert cheese.
+
+This app is vulnerable to SQL Injection, so begin by trying various sql injection attacks.
+
+Try to get the password of the 'admin' user with sql injection.
+
+<details>
+<summary>Hint</summary>  
+The admin details are in another table, so you will want to make use of the MySQL INFORMATION_SCHEMA tables.
+</details>
+<br />
+
+### Exercise 2:
+
+This is a slightly improved version of the cheese store.
+
+The developer has escaped inputs using '[real-escape-string][MYSQL_ESCAPE_STRING_DOCS]'.
+
+Try to get the password of the 'admin' user with this version.
+
+**Note:** The table names are the same as in Exercise 1.
+
+<details>
+<summary>Hint</summary>  
+Have a look at the url in the browser.
+</details>
+<br />
+
+### Exercise 3:
+
+The input in exercise 2 has been removed now.
+
+Try to get the password of the 'admin' user with this version.
+
+**Note:** The table names are the same as in Exercise 1.
+
+**Hint:**
+<details>You can see network requests using the Firefox browser installed on Kali.</details>
+<br />
+
+### Exercise 4:
+
+The 'Offensive Security Bank' has a user 'bob. Prepared Statements are used, but see if you can find out his current balance.
+
+An example user you can log in as is: username 'alice' with password '123456'.
+
+If you want to reset the database after some changes, you can reset with:
+```
+docker-compose down
+docker-compose up
+```
+
+<details>
+<summary>Hint</summary>
+Prepared statements have not been used in all areas of the site. What kind of sql query would be used to change a user's password?
+</details>
+<br />
+
+### Additional Practice:
+
+### Other Vulnerable Web Apps
+There are many other (better) vulnerable web applications built to practice various penetration testing techniques, including web injection attacks.
+Feel free to try out other vulnerable web applications, for example:
+- [OWASP WebGoat Project][WEBGOAT]
+- [Mutillidae][MUTILLIDAE]
+
+### [Bandit][BANDIT]
+
+Please continue with the Bandit exercises from the previous sessions. If you need help getting started, please call one of us over. **N.B.** in order to be able to ssh sucessfully, you must use the **vpn network**, as the port is likely blocked on Corporate WiFi.
+
+
+### Useful Links:
+
+[SQL Injection Cheat Sheet][NETSPARKER_CHEAT_SHEET]
+
+[DOCKER_KALI_INSTRUCTIONS]: https://medium.com/@airman604/installing-docker-in-kali-linux-2017-1-fbaa4d1447fe
+[DOCKER_INSTRUCTIONS]: https://docs.docker.com/install/#supported-platforms
+[DOCKER_COMPOSE_INSTRUCTIONS]: https://docs.docker.com/compose/install/
+[EXERCISE_TAR]: {{site.baseurl}}/assets/sqli_exercises.tar.gz
+[MYSQL_ESCAPE_STRING_DOCS]: http://php.net/manual/en/mysqli.real-escape-string.php
+[BANDIT]: http://overthewire.org/wargames/bandit/
+[WEBGOAT]: https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+[MUTILLIDAE]: https://sourceforge.net/projects/mutillidae/
+
+[NETSPARKER_CHEAT_SHEET]: https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+

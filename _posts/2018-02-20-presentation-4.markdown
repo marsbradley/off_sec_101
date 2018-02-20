@@ -36,13 +36,15 @@ transition: slide
 
 </section>
 
-<section data-markdown>
+<section>
 
-### Impact
-- Steal Data
-- Spoof Identity
-- Remove/Corrupt Data
-- System Takeover
+<h3>Impact</h3>
+<ul>
+<li class="fragment">Steal Data</li>
+<li class="fragment">Spoof Identity</li>
+<li class="fragment">Remove/Corrupt Data</li>
+<li class="fragment">System Takeover</li>
+</ul>
 
 </section>
 
@@ -62,7 +64,7 @@ haveibeenpwned.com
 </section>
 
 <section>
-<h3>SQL</h3>
+<h3>SQL 101</h3>
 <table class="fragment">
 	<caption>users</caption>
 	<tr>
@@ -82,7 +84,7 @@ haveibeenpwned.com
 	</tr>
 </table>
 <pre class="fragment">
-<code class="mysql">SELECT username, password FROM users WHERE user='alice';
+<code class="mysql">SELECT username, password FROM users WHERE username='alice';
 </code>
 </pre>
 <table class="fragment">
@@ -101,7 +103,7 @@ haveibeenpwned.com
 <h3>SQL</h3>
 <pre>
 <code class="mysql">SELECT * FROM users WHERE username='alice';
-INSERT INTO users (3, 'chuck', 'password');
+INSERT INTO users (3, 'charlie', 'password');
 DELETE FROM users WHERE id=1;
 </code>
 </pre>
@@ -109,20 +111,22 @@ DELETE FROM users WHERE id=1;
 
 <section>
 <h3>SQL Injection</h3>
-<img class="fragment" width="500px" src="{{site.baseurl}}/assets/images/web_request_with_db.svg"><br />
-<img class="fragment" width="500px" src="{{site.baseurl}}/assets/images/unexpected_web_request_with_db.svg">
+<img class="fragment" width="700px" src="{{site.baseurl}}/assets/images/web_request_with_db.svg"><br />
+<img class="fragment" width="700px" src="{{site.baseurl}}/assets/images/unexpected_web_request_with_db.svg">
 </section>
 
 <section>
-<h3>SQL Injection</h3>
+<h3>SQL Normal Usage</h3>
 <pre>
 <code class="mysql">SELECT * FROM users 
 WHERE username='$username' AND password='$password';</code>
 </pre>
-<pre>
+<pre class="fragment">
 <code class="php">$username = "alice"
 $password = "123456"
 </code>
+</pre>
+<pre class="fragment">
 <code class="mysql">SELECT * FROM users
 WHERE username='alice' AND password='123456';
 </code>
@@ -144,40 +148,19 @@ WHERE username='alice';-- ' AND password='$password';</code>
 </pre>
 </section>
 
-<section>
-<h3>SQL Injection</h3>
-<pre>
-<code class="mysql">SELECT * FROM users 
-WHERE username='alice' OR 1=1;-- ' AND password=...</code>
-</pre>
-<pre class="fragment">
-<code class="mysql">SELECT * FROM users WHERE username='alice';
-DROP users;-- ' AND password=...
-</code>
-</pre>
-<pre class="fragment">
-<code class="mysql">SELECT * FROM users WHERE username='alice' 
-UNION SELECT name, address, 1 from staff;-- ' AND password=...
-</code>
-</pre>
-<pre class="fragment">
-<code class="mysql">SELECT * FROM users 
-WHERE username='alice' OR 1=SLEEP(15);-- ' AND password=...
-</code>
-</pre>
-</section>
-
 <section data-markdown>
 ### Demo
 </section>
 
-<section data-markdown>
+<section>
 
-### Prevention
-- Suppress Errors
-- Sanitize and filter inputs
-- Limiting Privileges
-- Paramaterized Queries
+<h3>Defense</h3>
+<ul>
+<li class="fragment">Suppress Errors</li>
+<li class="fragment">Sanitize Inputs</li>
+<li class="fragment">Limit Privileges</li>
+<li class="fragment">Paramaterized Queries</li>
+</ul>
 
 </section>
 
