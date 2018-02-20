@@ -36,13 +36,15 @@ transition: slide
 
 </section>
 
-<section data-markdown>
+<section>
 
-### Impact
-- Steal Data
-- Spoof Identity
-- Remove/Corrupt Data
-- System Takeover
+<h3>Impact</h3>
+<ul>
+<li class="fragment">Steal Data</li>
+<li class="fragment">Spoof Identity</li>
+<li class="fragment">Remove/Corrupt Data</li>
+<li class="fragment">System Takeover</li>
+</ul>
 
 </section>
 
@@ -150,13 +152,15 @@ WHERE username='alice';-- ' AND password='$password';</code>
 ### Demo
 </section>
 
-<section data-markdown>
+<section>
 
-### Defense
-- Suppress Errors
-- Sanitize Inputs
-- Limiting Privileges
-- Paramaterized Queries
+<h3>Defense</h3>
+<ul>
+<li class="fragment">Suppress Errors</li>
+<li class="fragment">Sanitize Inputs</li>
+<li class="fragment">Limit Privileges</li>
+<li class="fragment">Paramaterized Queries</li>
+</ul>
 
 </section>
 
