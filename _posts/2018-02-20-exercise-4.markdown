@@ -30,7 +30,7 @@ Afterwards, to install docker-compose in Kali Linux, run the following:
 ```apt-get install docker-compose```
 
 #### On Other Platforms
-If you don't want to/have trouble installing docker and docker-compose on Kali Linux, you can also run on other platforms, for example Mac and Windows (if you haven't already got them installed).
+If you don't want to/have trouble installing docker and docker-compose on Kali Linux, you can also install them on other platforms, for example Mac and Windows (if you haven't already got them installed).
 
 Instructions for installing Docker can be found [here][DOCKER_INSTRUCTIONS].  
 Instructions for installing Docker-Compose can be found [here][DOCKER_COMPOSE_INSTRUCTIONS].
