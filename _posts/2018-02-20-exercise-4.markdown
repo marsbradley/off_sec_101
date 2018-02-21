@@ -41,7 +41,7 @@ Download the docker images tar [here][EXERCISE_TAR]
 
 Extract with:
 
-```tar -xzvf sqli-exercises.tar.gz```
+```tar -xzvf sqli_exercises.tar.gz```
 
 Go into the directory and run:
 
