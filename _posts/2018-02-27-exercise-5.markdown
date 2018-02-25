@@ -35,3 +35,10 @@ Navigate to the OWASP 2013 section, then A3 - Cross Site Scripting.
 Here, we will focus on Reflected (First Order) and Persistent (Second Order).
 
 Try some of the exploit examples you've seen earlier!
+
+
+## Teardown
+
+Type `docker ps` to get the list of running docker containers.
+
+Get the container ID of the running OWASP container, and type `docker kill <ID>` to stop the container running.
