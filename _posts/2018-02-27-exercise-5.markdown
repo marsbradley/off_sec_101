@@ -11,7 +11,7 @@ We will use https://xss-game.appspot.com, which is an XSS-driven game developed 
 
 There are 6 exercises, with increasing difficulty.
 
-Try the first 3 exercises at least.
+Make sure to use the `Toggle Code` function to get a glimpse of the source code.
 
 
 ## OWASP Mutillidae II
@@ -34,7 +34,9 @@ Navigate to the OWASP 2013 section, then A3 - Cross Site Scripting.
 
 Here, we will focus on Reflected (First Order) and Persistent (Second Order).
 
-Try some of the exploit examples you've seen earlier!
+Try some of the exploit examples you've seen earlier, each example shows a potential attack vector.
+
+This section also includes some much more advanced scenarios, which you can try to complete.
 
 
 ## Teardown
