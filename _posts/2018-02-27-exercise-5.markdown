@@ -3,4 +3,44 @@ layout: post
 title:  "Exercise 5 | Cross-site Scripting"
 ---
 
-This is a template, you shouldn't be seeing this...
+The exercises are meant to give you some basic practice with XSS.
+
+## Web Exercises
+
+We will use https://xss-game.appspot.com, which is an XSS-driven game developed by Google.
+
+There are 6 exercises, with increasing difficulty.
+
+Make sure to use the `Toggle Code` function to get a glimpse of the source code.
+
+
+## OWASP Mutillidae II
+
+OWASP Mutillidae II is a free, open source, deliberately vulnerable web-application providing a target for web-security enthusiast.
+
+## Setup
+
+Run the command `docker run -d -p 80:80 citizenstig/nowasp`.
+
+NOTE: This image may take a while to download.
+
+Once complete, go to localhost:80 in your browser.
+
+If you see a database connection error, click `Setup/Reset the DB` link at the top of the page, and click OK on the resulting dialog box.
+
+## Exercises
+
+Navigate to the OWASP 2013 section, then A3 - Cross Site Scripting.
+
+Here, we will focus on Reflected (First Order) and Persistent (Second Order).
+
+Try some of the exploit examples you've seen earlier, each example shows a potential attack vector.
+
+This section also includes some much more advanced scenarios, which you can try to complete.
+
+
+## Teardown
+
+Type `docker ps` to get the list of running docker containers.
+
+Get the container ID of the running OWASP container, and type `docker kill <ID>` to stop the container running.
