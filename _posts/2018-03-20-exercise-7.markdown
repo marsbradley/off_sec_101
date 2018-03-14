@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Exercise 6 | Memory"
+title:  "Exercise 7 | Cutting Edge Exploits"
 ---
 
 This is a template, you shouldn't be seeing this...

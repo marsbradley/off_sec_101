@@ -1,6 +1,0 @@
----
-layout: post
-title:  "Exercise 7 | Reverse Engineering"
----
-
-This is a template, you shouldn't be seeing this...
