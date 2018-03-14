@@ -53,10 +53,14 @@ transition: slide
 
 </section>
 
-<section data-markdown>
+<section>
+<h3>Generic Stack</h3>
+<img width="800px" src="{{site.baseurl}}/assets/images/stack.png">
+</section>
 
-### What is an instruction?
-
+<section>
+<h3>Specific Stack</h3>
+<img width="680px" src="{{site.baseurl}}/assets/images/call_stack.png">
 </section>
 
 <section data-markdown>
@@ -176,19 +180,36 @@ transition: slide
 
 <section data-markdown>
 
-### Step 1: Take control of a program's call-stack
+### Step 1: 
+- Take control of a program's call-stack
 
 </section>
 
 <section data-markdown>
 
-### Step 2: String together existing groups of instructions (known as **gadgets**) to perform desired functionality
+- Stack Buffer-overflow
+- Heap Overflow
+- Privilege Escalation
+- Use After Free
 
 </section>
 
 <section data-markdown>
 
-### Step 3: Profit $$$
+### Step 2: 
+- String together existing groups of instructions (known as **gadgets**) to perform desired functionality
+
+</section>
+
+<section>
+<h3>Gadgets</h3>
+<img width="680px" src="{{site.baseurl}}/assets/images/gadgets.png">
+</section>
+
+<section data-markdown>
+
+### Step 3: 
+- Profit $$$
 
 </section>
 
