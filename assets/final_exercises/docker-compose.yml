@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  home_webserver:
+    image: off_sec_final_home_web
+    build: ./docker/home_webserver
+    volumes:
+      - ./docker/home_webserver/src:/var/www/html
+    ports:
+      - "80:80"
+      - "443:443"
+
+  storage_webserver:
+    image: off_sec_final_storage_web
+    build: ./docker/storage_webserver
+    volumes:
+      - ./docker/storage_webserver/src:/var/www/html
+    ports:
+      - "1234:80"
+      - "4443:443"
+    links:
+      - db
+
+  db:
+    image: off_sec_final_storage_db
+    build: ./docker/db
+    volumes:
+      - ./docker/db/init:/docker-entrypoint-initdb.d/
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=docker
