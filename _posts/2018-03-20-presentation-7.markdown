@@ -1,6 +1,6 @@
 ---
 layout: slide
-title:  "Presentation 8 | Cutting Edge Exploits"
+title:  "Presentation 7 | Cutting Edge Exploits"
 transition: slide
 ---
 

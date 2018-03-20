@@ -1,6 +1,0 @@
----
-layout: post
-title:  "Exercise 8 | Cutting Edge Exploits"
----
-
-This is a template, you shouldn't be seeing this...
