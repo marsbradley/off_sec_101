@@ -3,4 +3,62 @@ layout: post
 title:  "Exercise 7 | Cutting Edge Exploits"
 ---
 
-This is a template, you shouldn't be seeing this...
+This week's exercise is meant to act as a refresher for the previous weeks.
+
+### Setup
+
+You will need to install Docker and Docker Compose if you have not done so already. Instructions can be found on Week 4's exercises [here][WEEK_4].
+
+#### Load Exercises
+Download the docker images tar [here][EXERCISE_TAR].
+
+Extract with:
+
+```tar -xzvf final_exercises.tar.gz```
+
+Go into the directory and run:
+
+```docker-compose up --build```
+
+This may take some time to complete if it needs to download the base docker images for the first time.
+
+At the end, if all goes according to plan you should see the exercise by opening your browser and going to localhost.
+
+### Aim:
+
+You should see a page with an input field to enter a password. Try to use the knowledge you've gained in previous weeks to work out what to enter into the field.
+
+The password is 6 characters long (3 alphabet characters followed by 3 digits) and the SHA-256 encrypted password is stored in a file somewhere.
+
+<details>
+<summary>Hint</summary>  
+The page to access the file containing the password is on a different port to the main page.
+</details>
+<br />
+
+### Additional Practice:
+
+### Other Vulnerable Web Apps
+There are many other (better) vulnerable web applications built to practice various penetration testing techniques, including web injection attacks.
+Feel free to try out other vulnerable web applications, for example:
+- [OWASP WebGoat Project][WEBGOAT]
+- [Mutillidae][MUTILLIDAE]
+
+### [Bandit][BANDIT]
+
+Please continue with the Bandit exercises from the previous sessions. If you need help getting started, please call one of us over. **N.B.** in order to be able to ssh sucessfully, you must use the **vpn network**, as the port is likely blocked on Corporate WiFi.
+
+
+### Useful Links:
+
+[SQL Injection Cheat Sheet][NETSPARKER_CHEAT_SHEET]
+
+[WEEK_4]: {{site.baseurl}}/2018/02/20/exercise-4.html
+[EXERCISE_TAR]: {{site.baseurl}}/assets/final_exercises.tar.gz
+[MYSQL_ESCAPE_STRING_DOCS]: http://php.net/manual/en/mysqli.real-escape-string.php
+[BANDIT]: http://overthewire.org/wargames/bandit/
+[WEBGOAT]: https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+[MUTILLIDAE]: https://sourceforge.net/projects/mutillidae/
+
+[NETSPARKER_CHEAT_SHEET]: https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+
