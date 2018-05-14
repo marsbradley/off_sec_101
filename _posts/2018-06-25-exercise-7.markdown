@@ -1,4 +1,4 @@
----
+6---
 layout: post
 title:  "Exercise 7 | Cutting Edge Exploits"
 ---
