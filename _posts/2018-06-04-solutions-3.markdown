@@ -21,9 +21,10 @@ If you click ‘Make Substitutions’ the intercept will appear in the ciphertex
 
 From here you need to input letters into the substitution boxes as you think fit. For example, given the intercept TXE, where T and E have been substituted, you could make the assumption that X should be substituted with H to make ‘THE’.
 
-<detail>
+<details>
 If you don’t feel like guessing, a big hint is the first word is ‘QUESTION’, so you can immediately make substitutions for those letters.
 </details>
+<br />
 
 ![QUESTION letters substituted]({{site.baseurl}}/assets/images/ex3/question_substitution.png "QUESTION letters substituted")
 
