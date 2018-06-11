@@ -54,6 +54,7 @@ The solution to 3 involves using GMIC. This tool has a lot more capability than 
 
 #### Step by step solution:
 
+
 1. The first step is to download GMIC. This is available (at the time of writing) on MacOS via homebrew, so can be installed using `brew install gmic`. For any other OS please follow the instructions provided in the GMIC repository: https://github.com/dtschump/gmic-community
 2. Once installed the tool can be used via the command line. A basic usage has the format `gmic <file1> <file2> … <fileN> -<command> <options> -output <output filename>`
 3. The lesson itself has a big hint to the solution; the image encryption example given involves XOR’ing pixels together, and it just so happens GMIC supports XOR via the -blend command…
