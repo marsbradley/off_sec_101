@@ -1,0 +1,94 @@
+---
+layout: post
+title:  "Solutions 3 | Cryptography"
+---
+
+### Question 1:
+
+The first question is a simple example of a cipher. The key to cracking the message is knowing the encryption method, e.g. rotation cipher, XOR, or AES. The easiest decryption method is using <a href="http://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html">the tool provided</a>.
+
+#### Step by step solution
+
+1. Visit the above website.
+2. Into the ‘Intercept’ box paste the encrypted text (note: questions 1 & 2 were encrypted using different methods, so will need to be decrypted individually. Don’t copy all of the encrypted text into the intercept!)
+3. The tool can do a fair amount of work for us using frequency analysis. Click the ‘Find Frequencies’ button to reveal the frequency of each letter in the intercept. If you’re feeling brave, you can make substitutions based on these values (e.g. ‘E’ is the most commonly used letter, so you could put ‘E’ into the box with the highest frequency).
+
+![English language and intercept letter frequencies]({{site.baseurl}}/assets/images/ex3/frequencies.png "English language and intercept letter frequencies")
+
+If you click ‘Make Substitutions’ the intercept will appear in the ciphertext box, after making any letter substitutions.
+
+![Make substitutions]({{site.baseurl}}/assets/images/ex3/make_substitutions.png "Make substitutions")
+
+From here you need to input letters into the substitution boxes as you think fit. For example, given the intercept TXE, where T and E have been substituted, you could make the assumption that X should be substituted with H to make ‘THE’.
+
+<details>
+If you don’t feel like guessing, a big hint is the first word is ‘QUESTION’, so you can immediately make substitutions for those letters.
+</details>
+<br />
+
+![QUESTION letters substituted]({{site.baseurl}}/assets/images/ex3/question_substitution.png "QUESTION letters substituted")
+
+From here educated guesses can be made. Notice the first word in the main text is `tUis`, so we can guess that U -> H. Similarly, the ciphertext contains `Qoesn’t`, so we can assume Q -> D.
+
+Continue identifying partial words and filling in the blanks, and before long you’ll have the fully decoded message:
+
+`question 1: this is a pretty simple starting question, hopefully it doesn’t stump any of you too much?`
+
+and the final substitutions are:
+
+![Question 1 final substitutions]({{site.baseurl}}/assets/images/ex3/q1_final_substitutions.png "Question 1 final substitutions")
+
+### Question 2:
+
+The second question is very similar to the first. Follow the solution of inputting known substitutions and making educated guesses and you should receive the following the message:
+
+```
+question 2:
+the frequency of letters in text has been studied for use in cryptanalysis, and frequency analysis in particular, dating back to the iraqi mathematician al kindi, who formally developed the method (the ciphers breakable by this technique go back at least to the caesar cipher invented by julius caesar, so this method could have been explored in classical times). letter frequency analysis gained additional importance in europe with the development of movable type in fourteen-fifty ad, where one must estimate the amount of type required for each letterform, as evidenced by the variations in letter compartment size in typographer’s type cases. linguists use letter frequency analysis as a rudimentary technique for language identification, where it’s particularly effective as an indication of whether an unknown writing system is alphabetic, syllablic, or ideographic. no exact letter frequency distribution underlies a given language, since all writers write slightly differently. however, most languages have a characteristic distribution which is strongly apparent in longer texts. even language changes as extreme as from old english to modern english (regarded as mutually unintelligible) show strong trends in related letter frequencies.
+```
+
+![Question 2 final substitutions]({{site.baseurl}}/assets/images/ex3/q2_final_substitutions.png "Question 2 final substitutions")
+
+### Question 3:
+
+The solution to 3 involves using GMIC. This tool has a lot more capability than is explored in the lesson, so feel free to test out the other options available.
+
+#### Step by step solution:
+
+
+1. The first step is to download GMIC. This is available (at the time of writing) on MacOS via homebrew, so can be installed using `brew install gmic`. For any other OS please follow the instructions provided in the GMIC repository: https://github.com/dtschump/gmic-community
+2. Once installed the tool can be used via the command line. A basic usage has the format `gmic <file1> <file2> … <fileN> -<command> <options> -output <output filename>`
+3. The lesson itself has a big hint to the solution; the image encryption example given involves XOR’ing pixels together, and it just so happens GMIC supports XOR via the -blend command…
+4. The images provided are the blend image (the image to be encrypted) and the blending layer (similar to the hashing function: the key used to encrypt the image). Save these two images somewhere you can easily access them.
+
+![Blend image]({{site.baseurl}}/assets/images/ex3/blend_image.png "Blend image")
+![Blend layer]({{site.baseurl}}/assets/images/ex3/blend_layer.png "Blend layer")
+
+Once we have our images and our tool, it’s time to decrypt! The command we’ll be using is `blend` and as previously mentioned we want to xor the two images. Plugging this into the above format gives us: `gmic blend_img.png blend_layer.png -blend xor -output decrypt_img.png`
+
+If done correctly, ```decrypt_img.png``` should contain the following image:
+
+![Decrypted image]({{site.baseurl}}/assets/images/ex3/decrypted_image.png "Decrypted image")
+
+### Question 4:
+
+Another tool is needed to answer question 4. Hashcat is a command line and visual based password cracking tool. Information can be found on the <a href="https://hashcat.net/hashcat/">hashcat website</a>
+
+1. The first step is again to download the tool. If using Mac, this is also available on homebrew via the command `brew install hashcat`. (Running `hashcat --help` provides a lot of information on how to use the tool, as well as a few basic examples.)
+2. The question provides the hashing method used to create each password, and hints for how to decrypt the password. (Hashing is strong as it’s a one-way function, meaning once encrypted you can’t (easily) decrypt the hashed content. So, the trick to finding out the plaintext is to hash different plaintexts until the same hashed output is produced.)
+3. The first password has the hint "This password will ROCK YOU with how secure it is..." implying we should use the `rockyou` dictionary to brute-force guess the password. If you search for `rockyou dictionary` a number of websites will be returned where you can download the text file. (Rockyou is a dictionary of over 14 million commonly used password strings. Hashcat will take these strings and individually hash each one, then compare the output with the original hashed password.)
+4. Once you have the dictionary file you can run the hashcat command. The command is:
+
+`hashcat -a 0 -m 1400 2AE280B7B47499A3D8E51FA136C1B97F2F0533C5F5F95C49094A2A39B3FB891D rockyou.txt`
+
+-a is the attack mode to use (here we’re using ‘straight’), and -m is the method (1400 is SHA-256), and we supply the hashed password string and the dictionary file.
+5. Once completed you should see the cracked password is `garageband`
+6. The next password hint is `I love this 7-digit number :)` implying the password is a 7-digit number. The command is as follows:
+
+`hashcat -a 3 -m 1400 5C5D815F4BA5057E15F221884285780BA366AC07FA2300B1A8615CDF419ED8FB ?d?d?d?d?d?d?d`
+
+This command uses the attack-mode 3 (brute-force) to guess the 7-digit number. We also supply the number mask at the end of the command.
+7. This command doesn’t take as long to run, and once complete it should show the cracked password is `1422018`
+8. The final password doesn't have a hint, but we do have a new hashing method to work with: MD5. In order to crack this, you first need to make a file containing the hashed password (i.e. hash.txt). Then simply run the following command: `hashcat -a 0 –m 0 hash.txt rockyou.txt`
+(attack mode = straight, method = MD5, hash file, dictionary file)
+9. Once complete you’ll receive the usual output along with the cracked password `qwertyuiop`
