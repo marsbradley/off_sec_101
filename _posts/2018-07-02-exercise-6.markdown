@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Exercise 6 | Memory Exploitation"
+---
+
+As mentioned in the lecture, but worth a reminder; try not to feel discouraged! This is genuinely difficult material, that only a small number of practitioners around the world would call themselves "experts" in (compared to say the thousands of "script kiddies" practicing web attacks). Even making a small amount of headway into the first exercise is an achievement in itself.
+
+But that makes it all the more rewarding when you finally crack it!
+
+So let's jump in...
+
+### Exercises:
+
+For today's exercises we're going to be using the [Protostar VM][PROTOSTAR], which contains a number of memory based exploitation exercises. A live CD .iso can be downloaded from their [Google Drive][GOOGLEDRIVE] folder.
+
+Once the .iso has been downloaded, I recommend running it as a virtual machine using [VirtualBox][VIRTUALBOX]. Note that you don't need to create a hard-drive for the machine, as the exercises all run as a Live CD. Default parameters should work otherwise.
+
+Once the VM has been booted up, you can login using the user/user login credentials. I would recommend running `/bin/bash` at this point, as it gives you better command-line functionality, rather than the less fully featured `sh`.
+
+Now you're ready to start the exercises! You should start with Stack 0, and attempt to work you way up to Stack 4, as most of what we have talked about during the class concerns stack based exploits.
+
+
+[PROTOSTAR]: https://exploit-exercises.com/protostar/
+[GOOGLEDRIVE]: https://drive.google.com/drive/u/1/folders/0B9RbZkKdRR8qbkJjQ2VXbWNlQzg
+[VIRTUALBOX]: https://www.virtualbox.org/wiki/Downloads
